@@ -7,22 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F6F87CB1D1D8D6D0041D86E /* IVKLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F87CA1D1D8D6D0041D86E /* IVKLoginViewController.m */; };
+		3F6F87CE1D1D92E50041D86E /* IVKSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F87CD1D1D92E50041D86E /* IVKSignUpViewController.m */; };
 		3FD3AA631D14650D007918DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3AA621D14650D007918DA /* main.m */; };
 		3FD3AA661D14650D007918DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3AA651D14650D007918DA /* AppDelegate.m */; };
 		3FD3AA691D14650D007918DA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3AA681D14650D007918DA /* ViewController.m */; };
-		3FD3AA6C1D14650D007918DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3AA6A1D14650D007918DA /* Main.storyboard */; };
 		3FD3AA6E1D14650D007918DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3AA6D1D14650D007918DA /* Assets.xcassets */; };
 		3FD3AA711D14650D007918DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3AA6F1D14650D007918DA /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F6F87C91D1D8D6D0041D86E /* IVKLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVKLoginViewController.h; sourceTree = "<group>"; };
+		3F6F87CA1D1D8D6D0041D86E /* IVKLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVKLoginViewController.m; sourceTree = "<group>"; };
+		3F6F87CC1D1D92E50041D86E /* IVKSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IVKSignUpViewController.h; path = ../IVKSignUpViewController.h; sourceTree = "<group>"; };
+		3F6F87CD1D1D92E50041D86E /* IVKSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IVKSignUpViewController.m; path = ../IVKSignUpViewController.m; sourceTree = "<group>"; };
 		3FD3AA5E1D14650D007918DA /* iVK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iVK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD3AA621D14650D007918DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3FD3AA641D14650D007918DA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3FD3AA651D14650D007918DA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3FD3AA671D14650D007918DA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		3FD3AA681D14650D007918DA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		3FD3AA6B1D14650D007918DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FD3AA6D1D14650D007918DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FD3AA701D14650D007918DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FD3AA721D14650D007918DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,14 +62,17 @@
 		3FD3AA601D14650D007918DA /* iVK */ = {
 			isa = PBXGroup;
 			children = (
+				3F6F87CC1D1D92E50041D86E /* IVKSignUpViewController.h */,
+				3F6F87CD1D1D92E50041D86E /* IVKSignUpViewController.m */,
 				3FD3AA641D14650D007918DA /* AppDelegate.h */,
 				3FD3AA651D14650D007918DA /* AppDelegate.m */,
 				3FD3AA671D14650D007918DA /* ViewController.h */,
 				3FD3AA681D14650D007918DA /* ViewController.m */,
-				3FD3AA6A1D14650D007918DA /* Main.storyboard */,
 				3FD3AA6D1D14650D007918DA /* Assets.xcassets */,
 				3FD3AA6F1D14650D007918DA /* LaunchScreen.storyboard */,
 				3FD3AA721D14650D007918DA /* Info.plist */,
+				3F6F87C91D1D8D6D0041D86E /* IVKLoginViewController.h */,
+				3F6F87CA1D1D8D6D0041D86E /* IVKLoginViewController.m */,
 				3FD3AA611D14650D007918DA /* Supporting Files */,
 			);
 			path = iVK;
@@ -138,7 +145,6 @@
 			files = (
 				3FD3AA711D14650D007918DA /* LaunchScreen.storyboard in Resources */,
 				3FD3AA6E1D14650D007918DA /* Assets.xcassets in Resources */,
-				3FD3AA6C1D14650D007918DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +156,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FD3AA691D14650D007918DA /* ViewController.m in Sources */,
+				3F6F87CB1D1D8D6D0041D86E /* IVKLoginViewController.m in Sources */,
+				3F6F87CE1D1D92E50041D86E /* IVKSignUpViewController.m in Sources */,
 				3FD3AA661D14650D007918DA /* AppDelegate.m in Sources */,
 				3FD3AA631D14650D007918DA /* main.m in Sources */,
 			);
@@ -158,14 +166,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3FD3AA6A1D14650D007918DA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3FD3AA6B1D14650D007918DA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3FD3AA6F1D14650D007918DA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -300,6 +300,7 @@
 				3FD3AA771D14650D007918DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
