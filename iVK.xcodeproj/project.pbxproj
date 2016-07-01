@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F5EABF91D26E17000E13F60 /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EABF81D26E17000E13F60 /* UIColor+CustomColors.m */; };
 		3F6F87CB1D1D8D6D0041D86E /* IVKLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F87CA1D1D8D6D0041D86E /* IVKLoginViewController.m */; };
 		3F6F87CE1D1D92E50041D86E /* IVKSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F87CD1D1D92E50041D86E /* IVKSignUpViewController.m */; };
 		3FD3AA631D14650D007918DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3AA621D14650D007918DA /* main.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F5EABF71D26E17000E13F60 /* UIColor+CustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColors.h"; sourceTree = "<group>"; };
+		3F5EABF81D26E17000E13F60 /* UIColor+CustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
 		3F6F87C91D1D8D6D0041D86E /* IVKLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVKLoginViewController.h; sourceTree = "<group>"; };
 		3F6F87CA1D1D8D6D0041D86E /* IVKLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVKLoginViewController.m; sourceTree = "<group>"; };
 		3F6F87CC1D1D92E50041D86E /* IVKSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IVKSignUpViewController.h; path = ../IVKSignUpViewController.h; sourceTree = "<group>"; };
@@ -74,6 +77,8 @@
 				3F6F87C91D1D8D6D0041D86E /* IVKLoginViewController.h */,
 				3F6F87CA1D1D8D6D0041D86E /* IVKLoginViewController.m */,
 				3FD3AA611D14650D007918DA /* Supporting Files */,
+				3F5EABF71D26E17000E13F60 /* UIColor+CustomColors.h */,
+				3F5EABF81D26E17000E13F60 /* UIColor+CustomColors.m */,
 			);
 			path = iVK;
 			sourceTree = "<group>";
@@ -155,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F5EABF91D26E17000E13F60 /* UIColor+CustomColors.m in Sources */,
 				3FD3AA691D14650D007918DA /* ViewController.m in Sources */,
 				3F6F87CB1D1D8D6D0041D86E /* IVKLoginViewController.m in Sources */,
 				3F6F87CE1D1D92E50041D86E /* IVKSignUpViewController.m in Sources */,
