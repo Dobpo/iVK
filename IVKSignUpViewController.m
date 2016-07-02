@@ -14,6 +14,8 @@
 
 -(void) viewDidLoad{
     [super viewDidLoad];
+    
+    
     UIColor *placeHolderColor = [UIColor myBlue];
     
     UIImageView *imageView =  [[UIImageView alloc] initWithFrame:self.view.bounds];
@@ -43,7 +45,7 @@
     self.navigationController.navigationBar.barTintColor = [UIColor myWhite];
     self.navigationController.navigationBar.tintColor = placeHolderColor;
     
-    CGRect textFieldRect = CGRectMake(PADDING,0.0, (self.view.frame.size.width - PADDING * 2), TEXT_FIELD_HEIGHT);
+    CGRect uiElementsRect = CGRectMake(PADDING,0.0, (self.view.frame.size.width - PADDING * 2), TEXT_FIELD_HEIGHT);
     
     NSAttributedString *firstNamePlaceHolder = [[NSAttributedString alloc] initWithString:@"First Name"
                                                                                attributes:@{NSForegroundColorAttributeName:placeHolderColor}];
@@ -54,42 +56,60 @@
     NSAttributedString *passwordPlaceHolder = [[NSAttributedString alloc] initWithString:@"Password"
                                                                               attributes:@{NSForegroundColorAttributeName:placeHolderColor}];
     
-    self.firstNameTextField = [[UITextField alloc] initWithFrame:textFieldRect];
+    self.firstNameTextField = [[UITextField alloc] initWithFrame:uiElementsRect];
     [self.firstNameTextField setAttributedText:firstNamePlaceHolder];
     [self.view addSubview:self.firstNameTextField];
-    textFieldRect.origin.y += TEXT_FIELD_HEIGHT + PADDING;
+    uiElementsRect.origin.y += TEXT_FIELD_HEIGHT + PADDING;
     UIView *lineView1 = [[UIView alloc] initWithFrame:CGRectMake(0.0, self.firstNameTextField.frame.size.height - 1, self.firstNameTextField.frame.size.width, 0.5)];
     [lineView1 setBackgroundColor:placeHolderColor];
     [self.firstNameTextField addSubview:lineView1];
     
-    self.lastNameTextField = [[UITextField alloc] initWithFrame:textFieldRect];
+    self.lastNameTextField = [[UITextField alloc] initWithFrame:uiElementsRect];
     [self.lastNameTextField setAttributedText:lastNamePlaceHolder];
     [self.view addSubview:self.lastNameTextField];
-    textFieldRect.origin.y += TEXT_FIELD_HEIGHT + PADDING;
+    uiElementsRect.origin.y += TEXT_FIELD_HEIGHT + PADDING;
     UIView *lineView2 = [[UIView alloc] initWithFrame:CGRectMake(0.0, self.lastNameTextField.frame.size.height - 1, self.lastNameTextField.frame.size.width, 0.5)];
     [lineView2 setBackgroundColor:placeHolderColor];
     [self.lastNameTextField addSubview:lineView2];
     
     
-    self.emailTextField = [[UITextField alloc] initWithFrame:textFieldRect];
+    self.emailTextField = [[UITextField alloc] initWithFrame:uiElementsRect];
     [self.emailTextField setAttributedText:emailPlaceHolder];
     [self.view addSubview:self.emailTextField];
-    textFieldRect.origin.y += TEXT_FIELD_HEIGHT + PADDING;
+    uiElementsRect.origin.y += TEXT_FIELD_HEIGHT + PADDING;
     UIView *lineView3 = [[UIView alloc] initWithFrame:CGRectMake(0.0, self.emailTextField.frame.size.height - 1, self.emailTextField.frame.size.width, 0.5)];
     [lineView3 setBackgroundColor:placeHolderColor];
     [self.emailTextField addSubview:lineView3];
     
-    self.passwordTextField = [[UITextField alloc] initWithFrame:textFieldRect];
+    self.passwordTextField = [[UITextField alloc] initWithFrame:uiElementsRect];
     [self.passwordTextField setAttributedText:passwordPlaceHolder];
     [self.view addSubview:self.passwordTextField];
-    textFieldRect.origin.y += TEXT_FIELD_HEIGHT + PADDING;
+    uiElementsRect.origin.y += TEXT_FIELD_HEIGHT + PADDING;
     UIView *lineView4 = [[UIView alloc] initWithFrame:CGRectMake(0.0, self.passwordTextField.frame.size.height - 1, self.passwordTextField.frame.size.width, 0.5)];
     [lineView4 setBackgroundColor:placeHolderColor];
     [self.passwordTextField addSubview:lineView4];
     
+    self.signInButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.signInButton setTitle:@"Sign In" forState:UIControlStateNormal];
+    [self.signInButton setTitleColor:placeHolderColor forState:UIControlStateNormal];
+    [self.signInButton addTarget:self
+                          action:@selector(showSignInView)
+                forControlEvents:UIControlEventTouchUpInside];
+    [self.signInButton setFrame:CGRectMake(self.view.frame.size.width - 60, uiElementsRect.origin.y, 50, TEXT_FIELD_HEIGHT)];
+    [self.view addSubview:self.signInButton];
+    
+    
 }
 
--(void)submit{
+-(void)showSignInView{
+
 }
 
+-(void)submit {
+    
+}
+
+/*- (UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}*/
 @end

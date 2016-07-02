@@ -15,6 +15,7 @@
 		3FD3AA691D14650D007918DA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3AA681D14650D007918DA /* ViewController.m */; };
 		3FD3AA6E1D14650D007918DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3AA6D1D14650D007918DA /* Assets.xcassets */; };
 		3FD3AA711D14650D007918DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3AA6F1D14650D007918DA /* LaunchScreen.storyboard */; };
+		DD2B39471D27D8440055FAC7 /* IVKSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2B39461D27D8440055FAC7 /* IVKSignInViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		3FD3AA6D1D14650D007918DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FD3AA701D14650D007918DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FD3AA721D14650D007918DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD2B39451D27D8440055FAC7 /* IVKSignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVKSignInViewController.h; sourceTree = "<group>"; };
+		DD2B39461D27D8440055FAC7 /* IVKSignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVKSignInViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,8 @@
 				3FD3AA611D14650D007918DA /* Supporting Files */,
 				3F5EABF71D26E17000E13F60 /* UIColor+CustomColors.h */,
 				3F5EABF81D26E17000E13F60 /* UIColor+CustomColors.m */,
+				DD2B39451D27D8440055FAC7 /* IVKSignInViewController.h */,
+				DD2B39461D27D8440055FAC7 /* IVKSignInViewController.m */,
 			);
 			path = iVK;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 				3F6F87CE1D1D92E50041D86E /* IVKSignUpViewController.m in Sources */,
 				3FD3AA661D14650D007918DA /* AppDelegate.m in Sources */,
 				3FD3AA631D14650D007918DA /* main.m in Sources */,
+				DD2B39471D27D8440055FAC7 /* IVKSignInViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

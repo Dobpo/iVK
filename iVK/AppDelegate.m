@@ -23,6 +23,7 @@
     [navController.navigationBar setTranslucent:NO];
     [[self window] setRootViewController:navController];
     [[self window] makeKeyAndVisible];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     return YES;
 }
 @end
