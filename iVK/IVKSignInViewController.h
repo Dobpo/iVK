@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+@import UIKit;
 
-@interface IVKSignInViewController : NSObject
+@interface IVKSignInViewController : UIViewController
 
 @end

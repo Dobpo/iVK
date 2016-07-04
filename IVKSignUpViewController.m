@@ -7,8 +7,15 @@
 //
 #import "UIColor+CustomColors.h"
 #import "IVKSignUpViewController.h"
+#import "IVKSessionDataManager.h"
+#import "IVKSignInViewController.h"
 #define PADDING 10
 #define TEXT_FIELD_HEIGHT 30
+
+#define CLIENT_ID 5534154
+#define CLIENT_SECRET 1Ct70CDyN7H0BlQtQ5qS
+
+
 
 @implementation IVKSignUpViewController
 
@@ -55,9 +62,12 @@
                                                                            attributes:@{NSForegroundColorAttributeName:placeHolderColor}];
     NSAttributedString *passwordPlaceHolder = [[NSAttributedString alloc] initWithString:@"Password"
                                                                               attributes:@{NSForegroundColorAttributeName:placeHolderColor}];
+    NSAttributedString *phonePlaceHolder = [[NSAttributedString alloc] initWithString:@"Phone" attributes:@{NSForegroundColorAttributeName:placeHolderColor}];
+    
     
     self.firstNameTextField = [[UITextField alloc] initWithFrame:uiElementsRect];
-    [self.firstNameTextField setAttributedText:firstNamePlaceHolder];
+    [self.firstNameTextField setAttributedPlaceholder:firstNamePlaceHolder];
+    [self.firstNameTextField setTextColor:[UIColor whiteColor]];
     [self.view addSubview:self.firstNameTextField];
     uiElementsRect.origin.y += TEXT_FIELD_HEIGHT + PADDING;
     UIView *lineView1 = [[UIView alloc] initWithFrame:CGRectMake(0.0, self.firstNameTextField.frame.size.height - 1, self.firstNameTextField.frame.size.width, 0.5)];
@@ -65,24 +75,37 @@
     [self.firstNameTextField addSubview:lineView1];
     
     self.lastNameTextField = [[UITextField alloc] initWithFrame:uiElementsRect];
-    [self.lastNameTextField setAttributedText:lastNamePlaceHolder];
+    [self.lastNameTextField setAttributedPlaceholder:lastNamePlaceHolder];
+    [self.lastNameTextField setTextColor:[UIColor whiteColor]];
     [self.view addSubview:self.lastNameTextField];
     uiElementsRect.origin.y += TEXT_FIELD_HEIGHT + PADDING;
     UIView *lineView2 = [[UIView alloc] initWithFrame:CGRectMake(0.0, self.lastNameTextField.frame.size.height - 1, self.lastNameTextField.frame.size.width, 0.5)];
     [lineView2 setBackgroundColor:placeHolderColor];
     [self.lastNameTextField addSubview:lineView2];
     
-    
     self.emailTextField = [[UITextField alloc] initWithFrame:uiElementsRect];
-    [self.emailTextField setAttributedText:emailPlaceHolder];
+    [self.emailTextField setAttributedPlaceholder:emailPlaceHolder];
+    [self.emailTextField setTextColor:[UIColor whiteColor]];
     [self.view addSubview:self.emailTextField];
     uiElementsRect.origin.y += TEXT_FIELD_HEIGHT + PADDING;
     UIView *lineView3 = [[UIView alloc] initWithFrame:CGRectMake(0.0, self.emailTextField.frame.size.height - 1, self.emailTextField.frame.size.width, 0.5)];
     [lineView3 setBackgroundColor:placeHolderColor];
     [self.emailTextField addSubview:lineView3];
     
+    self.phoneTextField = [[UITextField alloc] initWithFrame:uiElementsRect];
+    [self.phoneTextField setAttributedPlaceholder:phonePlaceHolder];
+    [self.phoneTextField setTextColor:[UIColor whiteColor]];
+    self.phoneTextField.keyboardType = UIKeyboardTypePhonePad;
+    [self.view addSubview:self.phoneTextField];
+    uiElementsRect.origin.y += TEXT_FIELD_HEIGHT + PADDING;
+    UIView *lineView5 = [[UIView alloc] initWithFrame:CGRectMake(0.0, self.emailTextField.frame.size.height - 1, self.emailTextField.frame.size.width, 0.5)];
+    [lineView5 setBackgroundColor:placeHolderColor];
+    [self.phoneTextField addSubview:lineView5];
+    
     self.passwordTextField = [[UITextField alloc] initWithFrame:uiElementsRect];
-    [self.passwordTextField setAttributedText:passwordPlaceHolder];
+    [self.passwordTextField setAttributedPlaceholder:passwordPlaceHolder];
+    [self.passwordTextField setTextColor:[UIColor whiteColor]];
+    [self.passwordTextField setSecureTextEntry:YES];
     [self.view addSubview:self.passwordTextField];
     uiElementsRect.origin.y += TEXT_FIELD_HEIGHT + PADDING;
     UIView *lineView4 = [[UIView alloc] initWithFrame:CGRectMake(0.0, self.passwordTextField.frame.size.height - 1, self.passwordTextField.frame.size.width, 0.5)];
@@ -102,14 +125,27 @@
 }
 
 -(void)showSignInView{
-
+    IVKSignInViewController *controller = [[IVKSignInViewController alloc]init];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 -(void)submit {
-    
+    NSDictionary *dictionary = @{
+                                 @"first_name":self.firstNameTextField.text,
+                                 @"last_name":self.lastNameTextField.text,
+                                 @"client_id":@"5534154",
+                                 @"client_secret":@"1Ct70CDyN7HOBlQtQ5qS",
+                                 @"phone":self.phoneTextField.text,
+                                 @"password":self.passwordTextField.text,
+                                 @"test_mode":@1
+                                 };
+   [IVKSessionDataManager POSTRequestWithURL:@"https://api.vk.com/method/auth.signup" parameters:dictionary handler:^(NSData *data, NSURLResponse *response, NSError *error) {
+       NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+       
+       id o = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+       
+       
+   }];
 }
 
-/*- (UIStatusBarStyle)preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
-}*/
 @end

@@ -9,5 +9,12 @@
 #import "IVKSignInViewController.h"
 
 @implementation IVKSignInViewController
-
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    self.title = @"Sign In";
+    
+    UIView *backgroundView = [[UIView alloc] initWithFrame:self.view.bounds];
+    [backgroundView setBackgroundColor:[UIColor whiteColor]];
+    [self.view addSubview:backgroundView];
+}
 @end

@@ -28,7 +28,7 @@
     UIColor *color = [UIColor colorWithRed:75.0f/255.0f
                                            green:120.0f/255.0f
                                             blue:156.0f/255.0f
-                                           alpha:1];
+                                           alpha:0.8];
     return color;
 }
 @end

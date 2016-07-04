@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B301AA054460950E8EE2928 /* libPods-iVK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E3D2087EC2940A5DE8D67A /* libPods-iVK.a */; };
+		3F447A721D2AC32800378009 /* IVKSessionDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F447A711D2AC32800378009 /* IVKSessionDataManager.m */; };
 		3F5EABF91D26E17000E13F60 /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EABF81D26E17000E13F60 /* UIColor+CustomColors.m */; };
-		3F6F87CB1D1D8D6D0041D86E /* IVKLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F87CA1D1D8D6D0041D86E /* IVKLoginViewController.m */; };
 		3F6F87CE1D1D92E50041D86E /* IVKSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F87CD1D1D92E50041D86E /* IVKSignUpViewController.m */; };
 		3FD3AA631D14650D007918DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3AA621D14650D007918DA /* main.m */; };
 		3FD3AA661D14650D007918DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3AA651D14650D007918DA /* AppDelegate.m */; };
@@ -19,21 +20,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07E3A6FF703C37634865AE09 /* Pods-iVK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iVK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iVK/Pods-iVK.debug.xcconfig"; sourceTree = "<group>"; };
+		3F447A701D2AC32800378009 /* IVKSessionDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVKSessionDataManager.h; sourceTree = "<group>"; };
+		3F447A711D2AC32800378009 /* IVKSessionDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVKSessionDataManager.m; sourceTree = "<group>"; };
 		3F5EABF71D26E17000E13F60 /* UIColor+CustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColors.h"; sourceTree = "<group>"; };
 		3F5EABF81D26E17000E13F60 /* UIColor+CustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
-		3F6F87C91D1D8D6D0041D86E /* IVKLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVKLoginViewController.h; sourceTree = "<group>"; };
-		3F6F87CA1D1D8D6D0041D86E /* IVKLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVKLoginViewController.m; sourceTree = "<group>"; };
 		3F6F87CC1D1D92E50041D86E /* IVKSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IVKSignUpViewController.h; path = ../IVKSignUpViewController.h; sourceTree = "<group>"; };
 		3F6F87CD1D1D92E50041D86E /* IVKSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IVKSignUpViewController.m; path = ../IVKSignUpViewController.m; sourceTree = "<group>"; };
 		3FD3AA5E1D14650D007918DA /* iVK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iVK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD3AA621D14650D007918DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3FD3AA641D14650D007918DA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		3FD3AA651D14650D007918DA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3FD3AA651D14650D007918DA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; };
 		3FD3AA671D14650D007918DA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		3FD3AA681D14650D007918DA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3FD3AA6D1D14650D007918DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FD3AA701D14650D007918DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FD3AA721D14650D007918DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82AA1BF2151F39A953035BFF /* Pods-iVK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iVK.release.xcconfig"; path = "Pods/Target Support Files/Pods-iVK/Pods-iVK.release.xcconfig"; sourceTree = "<group>"; };
+		D1E3D2087EC2940A5DE8D67A /* libPods-iVK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iVK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD2B39451D27D8440055FAC7 /* IVKSignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVKSignInViewController.h; sourceTree = "<group>"; };
 		DD2B39461D27D8440055FAC7 /* IVKSignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVKSignInViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -43,17 +47,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B301AA054460950E8EE2928 /* libPods-iVK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E43E30CF070B0D33259BD6F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1E3D2087EC2940A5DE8D67A /* libPods-iVK.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3FD3AA551D14650D007918DA = {
 			isa = PBXGroup;
 			children = (
 				3FD3AA601D14650D007918DA /* iVK */,
 				3FD3AA5F1D14650D007918DA /* Products */,
+				A6FE61E15A4C633B04E0F8A3 /* Pods */,
+				2E43E30CF070B0D33259BD6F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,13 +92,13 @@
 				3FD3AA6D1D14650D007918DA /* Assets.xcassets */,
 				3FD3AA6F1D14650D007918DA /* LaunchScreen.storyboard */,
 				3FD3AA721D14650D007918DA /* Info.plist */,
-				3F6F87C91D1D8D6D0041D86E /* IVKLoginViewController.h */,
-				3F6F87CA1D1D8D6D0041D86E /* IVKLoginViewController.m */,
 				3FD3AA611D14650D007918DA /* Supporting Files */,
 				3F5EABF71D26E17000E13F60 /* UIColor+CustomColors.h */,
 				3F5EABF81D26E17000E13F60 /* UIColor+CustomColors.m */,
 				DD2B39451D27D8440055FAC7 /* IVKSignInViewController.h */,
 				DD2B39461D27D8440055FAC7 /* IVKSignInViewController.m */,
+				3F447A701D2AC32800378009 /* IVKSessionDataManager.h */,
+				3F447A711D2AC32800378009 /* IVKSessionDataManager.m */,
 			);
 			path = iVK;
 			sourceTree = "<group>";
@@ -96,6 +111,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A6FE61E15A4C633B04E0F8A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				07E3A6FF703C37634865AE09 /* Pods-iVK.debug.xcconfig */,
+				82AA1BF2151F39A953035BFF /* Pods-iVK.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +127,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3FD3AA751D14650D007918DA /* Build configuration list for PBXNativeTarget "iVK" */;
 			buildPhases = (
+				AEFD99589892FAEFD0F4441D /* [CP] Check Pods Manifest.lock */,
 				3FD3AA5A1D14650D007918DA /* Sources */,
 				3FD3AA5B1D14650D007918DA /* Frameworks */,
 				3FD3AA5C1D14650D007918DA /* Resources */,
+				C07E7E87634DCC65511CB693 /* [CP] Embed Pods Frameworks */,
+				0B6684CC83AF5593F1C0FD95 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -160,6 +187,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0B6684CC83AF5593F1C0FD95 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iVK/Pods-iVK-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEFD99589892FAEFD0F4441D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C07E7E87634DCC65511CB693 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iVK/Pods-iVK-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3FD3AA5A1D14650D007918DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -167,9 +242,9 @@
 			files = (
 				3F5EABF91D26E17000E13F60 /* UIColor+CustomColors.m in Sources */,
 				3FD3AA691D14650D007918DA /* ViewController.m in Sources */,
-				3F6F87CB1D1D8D6D0041D86E /* IVKLoginViewController.m in Sources */,
 				3F6F87CE1D1D92E50041D86E /* IVKSignUpViewController.m in Sources */,
 				3FD3AA661D14650D007918DA /* AppDelegate.m in Sources */,
+				3F447A721D2AC32800378009 /* IVKSessionDataManager.m in Sources */,
 				3FD3AA631D14650D007918DA /* main.m in Sources */,
 				DD2B39471D27D8440055FAC7 /* IVKSignInViewController.m in Sources */,
 			);
@@ -273,22 +348,26 @@
 		};
 		3FD3AA761D14650D007918DA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07E3A6FF703C37634865AE09 /* Pods-iVK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iVK/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = www.iVK;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brn.vk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		3FD3AA771D14650D007918DA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82AA1BF2151F39A953035BFF /* Pods-iVK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iVK/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = www.iVK;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brn.vk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

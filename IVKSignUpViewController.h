@@ -14,6 +14,7 @@
 @property (nonatomic, strong) UITextField *firstNameTextField;
 @property (nonatomic, strong) UITextField *lastNameTextField;
 @property (nonatomic, strong) UITextField *emailTextField;
+@property (nonatomic, strong) UITextField *phoneTextField;
 @property (nonatomic, strong) UITextField *passwordTextField;
 @property (nonatomic, strong) UIButton *signInButton;
 
