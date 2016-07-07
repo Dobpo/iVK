@@ -12,12 +12,14 @@
 #define PADDING 10
 #define TEXT_FIELD_HEIGHT 30
 
-#define CLIENT_ID 5534154
-#define CLIENT_SECRET 1Ct70CDyN7H0BlQtQ5qS
-
+#define CLIENT_ID 5535878
+#define CLIENT_SECRET JMKm7SlQ74mWEe9JlZN7
 
 
 @implementation IVKSignUpViewController
+
+NSString *appId = @"5535878";
+NSString *secretKey = @"JMKm7SlQ74mWEe9JlZN7";
 
 -(void) viewDidLoad{
     [super viewDidLoad];
@@ -133,18 +135,23 @@
     NSDictionary *dictionary = @{
                                  @"first_name":self.firstNameTextField.text,
                                  @"last_name":self.lastNameTextField.text,
-                                 @"client_id":@"5534154",
-                                 @"client_secret":@"1Ct70CDyN7HOBlQtQ5qS",
+                                 @"client_id":@"5535878",
+                                 @"client_secret":@"JMKm7SlQ74mWEe9JlZN7",
                                  @"phone":self.phoneTextField.text,
                                  @"password":self.passwordTextField.text,
                                  @"test_mode":@1
                                  };
    [IVKSessionDataManager POSTRequestWithURL:@"https://api.vk.com/method/auth.signup" parameters:dictionary handler:^(NSData *data, NSURLResponse *response, NSError *error) {
-       NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-       
+       //NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+
        id o = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
        
+       NSDictionary *jsonAnswer = [NSJSONSerialization JSONObjectWithData:data
+                                                            options:NSJSONReadingMutableContainers
+                                                              error:nil];
        
+       NSLog(@"%@", [jsonAnswer objectForKey:@"error_code"]);
+       NSLog(@"%@", [jsonAnswer objectForKey:@"last_name"]);
    }];
 }
 

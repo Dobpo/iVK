@@ -11,4 +11,9 @@
 
 @interface IVKSignInViewController : UIViewController
 
+@property (nonatomic, strong) UITextField *logginTextField;
+@property (nonatomic, strong) UITextField *passwordTextField;
+@property (nonatomic, strong) UIButton *forgotPasswordButton;
+@property (nonatomic, strong) UIButton *signInButton;
+
 @end

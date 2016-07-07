@@ -354,7 +354,7 @@
 				INFOPLIST_FILE = iVK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.brn.vk;
+				PRODUCT_BUNDLE_IDENTIFIER = www.iVK.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -367,7 +367,7 @@
 				INFOPLIST_FILE = iVK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.brn.vk;
+				PRODUCT_BUNDLE_IDENTIFIER = www.iVK.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
