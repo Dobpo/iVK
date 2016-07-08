@@ -16,7 +16,7 @@
 		3FD3AA691D14650D007918DA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3AA681D14650D007918DA /* ViewController.m */; };
 		3FD3AA6E1D14650D007918DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3AA6D1D14650D007918DA /* Assets.xcassets */; };
 		3FD3AA711D14650D007918DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3AA6F1D14650D007918DA /* LaunchScreen.storyboard */; };
-		DD2B39471D27D8440055FAC7 /* IVKSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2B39461D27D8440055FAC7 /* IVKSignInViewController.m */; };
+		3FD5382D1D3023FA00DE9419 /* IVKNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD5382C1D3023FA00DE9419 /* IVKNewsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,10 +36,10 @@
 		3FD3AA6D1D14650D007918DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FD3AA701D14650D007918DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FD3AA721D14650D007918DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FD5382B1D3023FA00DE9419 /* IVKNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVKNewsViewController.h; sourceTree = "<group>"; };
+		3FD5382C1D3023FA00DE9419 /* IVKNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVKNewsViewController.m; sourceTree = "<group>"; };
 		82AA1BF2151F39A953035BFF /* Pods-iVK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iVK.release.xcconfig"; path = "Pods/Target Support Files/Pods-iVK/Pods-iVK.release.xcconfig"; sourceTree = "<group>"; };
 		D1E3D2087EC2940A5DE8D67A /* libPods-iVK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iVK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD2B39451D27D8440055FAC7 /* IVKSignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVKSignInViewController.h; sourceTree = "<group>"; };
-		DD2B39461D27D8440055FAC7 /* IVKSignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVKSignInViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,10 +95,10 @@
 				3FD3AA611D14650D007918DA /* Supporting Files */,
 				3F5EABF71D26E17000E13F60 /* UIColor+CustomColors.h */,
 				3F5EABF81D26E17000E13F60 /* UIColor+CustomColors.m */,
-				DD2B39451D27D8440055FAC7 /* IVKSignInViewController.h */,
-				DD2B39461D27D8440055FAC7 /* IVKSignInViewController.m */,
 				3F447A701D2AC32800378009 /* IVKSessionDataManager.h */,
 				3F447A711D2AC32800378009 /* IVKSessionDataManager.m */,
+				3FD5382B1D3023FA00DE9419 /* IVKNewsViewController.h */,
+				3FD5382C1D3023FA00DE9419 /* IVKNewsViewController.m */,
 			);
 			path = iVK;
 			sourceTree = "<group>";
@@ -244,9 +244,9 @@
 				3FD3AA691D14650D007918DA /* ViewController.m in Sources */,
 				3F6F87CE1D1D92E50041D86E /* IVKSignUpViewController.m in Sources */,
 				3FD3AA661D14650D007918DA /* AppDelegate.m in Sources */,
+				3FD5382D1D3023FA00DE9419 /* IVKNewsViewController.m in Sources */,
 				3F447A721D2AC32800378009 /* IVKSessionDataManager.m in Sources */,
 				3FD3AA631D14650D007918DA /* main.m in Sources */,
-				DD2B39471D27D8440055FAC7 /* IVKSignInViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

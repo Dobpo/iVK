@@ -8,12 +8,9 @@
 #import "UIColor+CustomColors.h"
 #import "IVKSignUpViewController.h"
 #import "IVKSessionDataManager.h"
-#import "IVKSignInViewController.h"
+#import "AppDelegate.h"
 #define PADDING 10
 #define TEXT_FIELD_HEIGHT 30
-
-#define CLIENT_ID 5535878
-#define CLIENT_SECRET JMKm7SlQ74mWEe9JlZN7
 
 
 @implementation IVKSignUpViewController
@@ -127,8 +124,8 @@ NSString *secretKey = @"JMKm7SlQ74mWEe9JlZN7";
 }
 
 -(void)showSignInView{
-    IVKSignInViewController *controller = [[IVKSignInViewController alloc]init];
-    [self.navigationController pushViewController:controller animated:YES];
+    UIApplication *application = [UIApplication sharedApplication];
+    [(AppDelegate *)application.delegate logIn];
 }
 
 -(void)submit {
@@ -142,16 +139,14 @@ NSString *secretKey = @"JMKm7SlQ74mWEe9JlZN7";
                                  @"test_mode":@1
                                  };
    [IVKSessionDataManager POSTRequestWithURL:@"https://api.vk.com/method/auth.signup" parameters:dictionary handler:^(NSData *data, NSURLResponse *response, NSError *error) {
-       //NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+       NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 
        id o = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
        
-       NSDictionary *jsonAnswer = [NSJSONSerialization JSONObjectWithData:data
+       NSDictionary *jsonAnswerDictionary = [NSJSONSerialization JSONObjectWithData:data
                                                             options:NSJSONReadingMutableContainers
                                                               error:nil];
-       
-       NSLog(@"%@", [jsonAnswer objectForKey:@"error_code"]);
-       NSLog(@"%@", [jsonAnswer objectForKey:@"last_name"]);
+       //NSLog(@"%@", jsonAnswerDictionary[@"error"][@"error_code"]);
    }];
 }
 
