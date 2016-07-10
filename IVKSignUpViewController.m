@@ -8,6 +8,7 @@
 #import "UIColor+CustomColors.h"
 #import "IVKSignUpViewController.h"
 #import "IVKSessionDataManager.h"
+#import "IVKFeedViewController.h"
 #import "AppDelegate.h"
 #define PADDING 10
 #define TEXT_FIELD_HEIGHT 30
@@ -135,6 +136,8 @@ NSString *secretKey = @"JMKm7SlQ74mWEe9JlZN7";
 }
 
 -(void)testButtonPressed{
+    IVKFeedViewController *feedViewController = [[IVKFeedViewController alloc] init];
+    [self.navigationController pushViewController:feedViewController animated:YES];
 }
 
 -(void)showSignInView{

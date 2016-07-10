@@ -13,7 +13,6 @@
 		3F6F87CE1D1D92E50041D86E /* IVKSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F87CD1D1D92E50041D86E /* IVKSignUpViewController.m */; };
 		3FD3AA631D14650D007918DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3AA621D14650D007918DA /* main.m */; };
 		3FD3AA661D14650D007918DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3AA651D14650D007918DA /* AppDelegate.m */; };
-		3FD3AA691D14650D007918DA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3AA681D14650D007918DA /* ViewController.m */; };
 		3FD3AA6E1D14650D007918DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3AA6D1D14650D007918DA /* Assets.xcassets */; };
 		3FD3AA711D14650D007918DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3AA6F1D14650D007918DA /* LaunchScreen.storyboard */; };
 		3FD5382D1D3023FA00DE9419 /* IVKFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD5382C1D3023FA00DE9419 /* IVKFeedViewController.m */; };
@@ -32,8 +31,6 @@
 		3FD3AA621D14650D007918DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3FD3AA641D14650D007918DA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3FD3AA651D14650D007918DA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; };
-		3FD3AA671D14650D007918DA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3FD3AA681D14650D007918DA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3FD3AA6D1D14650D007918DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FD3AA701D14650D007918DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FD3AA721D14650D007918DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,8 +87,6 @@
 				3F6F87CD1D1D92E50041D86E /* IVKSignUpViewController.m */,
 				3FD3AA641D14650D007918DA /* AppDelegate.h */,
 				3FD3AA651D14650D007918DA /* AppDelegate.m */,
-				3FD3AA671D14650D007918DA /* ViewController.h */,
-				3FD3AA681D14650D007918DA /* ViewController.m */,
 				3FD3AA6D1D14650D007918DA /* Assets.xcassets */,
 				3FD3AA6F1D14650D007918DA /* LaunchScreen.storyboard */,
 				3FD3AA721D14650D007918DA /* Info.plist */,
@@ -247,7 +242,6 @@
 			files = (
 				DDAA1FA91D3263D30002F3CE /* feedItem.m in Sources */,
 				3F5EABF91D26E17000E13F60 /* UIColor+CustomColors.m in Sources */,
-				3FD3AA691D14650D007918DA /* ViewController.m in Sources */,
 				3F6F87CE1D1D92E50041D86E /* IVKSignUpViewController.m in Sources */,
 				3FD3AA661D14650D007918DA /* AppDelegate.m in Sources */,
 				3FD5382D1D3023FA00DE9419 /* IVKFeedViewController.m in Sources */,

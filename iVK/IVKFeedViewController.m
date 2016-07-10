@@ -13,6 +13,8 @@
 -(void) viewDidLoad{
     [super viewDidLoad];
     
+    [self.view setBackgroundColor:[UIColor whiteColor]];
+    
     [self getFeedItems];
 }
 
@@ -23,6 +25,9 @@
         NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         
         id o = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        
+        NSDictionary *feedItemsDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        
     }];
 }
 

@@ -10,9 +10,10 @@
 
 @interface feedItem : NSObject
 
-@property (nonatomic, assign) NSInteger idItem;
+@property (nonatomic, assign) NSInteger id;
 @property (nonatomic, assign) NSInteger date;
 @property (nonatomic,weak) NSString *postType;
 @property (nonatomic,weak) NSString *text;
+
 
 @end
