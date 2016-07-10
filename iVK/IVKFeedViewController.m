@@ -6,17 +6,17 @@
 //  Copyright © 2016 Student. All rights reserved.
 //
 
-#import "IVKNewsViewController.h"
+#import "IVKFeedViewController.h"
 
 
-@implementation IVKNewsViewController
+@implementation IVKFeedViewController
 -(void) viewDidLoad{
     [super viewDidLoad];
     
-    [self tryToGetNews];
+    [self getFeedItems];
 }
 
--(void)tryToGetNews {
+-(void)getFeedItems {
     NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:@"authToken"];
     [IVKSessionDataManager GETRequestWithURL:@"https://api.vk.com/method/wall.get" parameters:@{@"access_token" : token} handler:^(NSData *data, NSURLResponse *response, NSError *error) {
         

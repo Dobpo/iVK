@@ -10,6 +10,6 @@
 #import "IVKSessionDataManager.h"
 @import UIKit;
 
-@interface IVKNewsViewController : UIViewController
+@interface IVKFeedViewController : UIViewController
 
 @end

@@ -18,6 +18,9 @@
 @property (nonatomic, strong) UITextField *passwordTextField;
 @property (nonatomic, strong) UIButton *signInButton;
 
+
+@property (nonatomic, strong) UIButton *testButton;
+
 @property (nonatomic, strong, readonly) NSString *appId;
 @property (nonatomic, strong, readonly) NSString *secretKey;
 

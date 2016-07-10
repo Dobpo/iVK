@@ -120,7 +120,21 @@ NSString *secretKey = @"JMKm7SlQ74mWEe9JlZN7";
     [self.signInButton setFrame:CGRectMake(self.view.frame.size.width - 60, uiElementsRect.origin.y, 50, TEXT_FIELD_HEIGHT)];
     [self.view addSubview:self.signInButton];
     
+    self.testButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.testButton setTitle:@"Test" forState:UIControlStateNormal];
+    [self.testButton setTitleColor:placeHolderColor forState:UIControlStateNormal];
+    [self.testButton addTarget:self
+                          action:@selector(testButtonPressed)
+                forControlEvents:UIControlEventTouchUpInside];
+    [self.testButton setFrame:CGRectMake(self.view.frame.size.width - 60, uiElementsRect.origin.y + TEXT_FIELD_HEIGHT + PADDING, 50, TEXT_FIELD_HEIGHT)];
+    [self.view addSubview:self.testButton];
     
+    
+    
+    
+}
+
+-(void)testButtonPressed{
 }
 
 -(void)showSignInView{
@@ -146,7 +160,6 @@ NSString *secretKey = @"JMKm7SlQ74mWEe9JlZN7";
        NSDictionary *jsonAnswerDictionary = [NSJSONSerialization JSONObjectWithData:data
                                                             options:NSJSONReadingMutableContainers
                                                               error:nil];
-       //NSLog(@"%@", jsonAnswerDictionary[@"error"][@"error_code"]);
    }];
 }
 

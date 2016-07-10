@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "IVKSignUpViewController.h"
-#import "IVKNewsViewController.h"
+#import "IVKFeedViewController.h"
 
 @interface AppDelegate ()<VKSdkUIDelegate,VKSdkDelegate>
 
@@ -22,9 +22,14 @@
     [self.sdkInst setUiDelegate:self];
     self.window = [[UIWindow alloc] init];
     IVKSignUpViewController *newSignUpViewController = [[IVKSignUpViewController alloc] init];
-    IVKNewsViewController *newsViewController = [[IVKNewsViewController alloc] init];
+    
+    IVKFeedViewController *feedViewController = [[IVKFeedViewController alloc] init];
+    
     NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:@"authToken"];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:token?newsViewController:newSignUpViewController];
+    
+    //UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:token?feedViewController:newSignUpViewController];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:newSignUpViewController];
+    
     [navController.navigationBar setTranslucent:NO];
     [[self window] setRootViewController:navController];
     [[self window] makeKeyAndVisible];
@@ -61,7 +66,6 @@
     [VKSdk wakeUpSession:SCOPE completeBlock:^(VKAuthorizationState state, NSError *error) {
        [VKSdk authorize:@[VK_PER_NOTIFY,VK_PER_FRIENDS,VK_PER_PHOTOS,VK_PER_AUDIO,VK_PER_VIDEO,VK_PER_DOCS,VK_PER_NOTES,VK_PER_PAGES,VK_PER_STATUS,VK_PER_WALL,VK_PER_GROUPS,VK_PER_MESSAGES,VK_PER_NOTIFICATIONS,VK_PER_STATS,VK_PER_ADS,VK_PER_OFFLINE,VK_PER_NOHTTPS,VK_PER_EMAIL,VK_PER_MARKET] withOptions:VKAuthorizationOptionsDisableSafariController];
     }];
-    /*VK_PER_NOTIFY,VK_PER_FRIENDS,VK_PER_PHOTOS,VK_PER_AUDIO,VK_PER_VIDEO,VK_PER_DOCS,VK_PER_NOTES,VK_PER_PAGES,VK_PER_STATUS,VK_PER_WALL,VK_PER_GROUPS,VK_PER_MESSAGES,VK_PER_NOTIFICATIONS,VK_PER_STATS,VK_PER_ADS,VK_PER_OFFLINE,VK_PER_NOHTTPS,VK_PER_EMAIL,VK_PER_MARKET*/
 }
 
 
