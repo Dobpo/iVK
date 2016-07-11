@@ -8,8 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "IVKSessionDataManager.h"
+#import "IVKFeedItem.h"
 @import UIKit;
 
-@interface IVKFeedViewController : UIViewController
+@interface IVKFeedViewController : UIViewController <UITableViewDataSource>
+
+@property (nonatomic, strong) NSMutableArray *feedItems;
+@property (nonatomic, strong) UITableView *tableView;
 
 @end

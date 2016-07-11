@@ -61,10 +61,12 @@
 }
 
 - (void)logIn{
-    NSArray *SCOPE = @[@"friends", @"email"];
+    NSArray *SCOPE = @[@"friends", @"email",@"wall"];
     
     [VKSdk wakeUpSession:SCOPE completeBlock:^(VKAuthorizationState state, NSError *error) {
-       [VKSdk authorize:@[VK_PER_NOTIFY,VK_PER_FRIENDS,VK_PER_PHOTOS,VK_PER_AUDIO,VK_PER_VIDEO,VK_PER_DOCS,VK_PER_NOTES,VK_PER_PAGES,VK_PER_STATUS,VK_PER_WALL,VK_PER_GROUPS,VK_PER_MESSAGES,VK_PER_NOTIFICATIONS,VK_PER_STATS,VK_PER_ADS,VK_PER_OFFLINE,VK_PER_NOHTTPS,VK_PER_EMAIL,VK_PER_MARKET] withOptions:VKAuthorizationOptionsDisableSafariController];
+            [VKSdk authorize:SCOPE withOptions:VKAuthorizationOptionsDisableSafariController];
+      
+       
     }];
 }
 
