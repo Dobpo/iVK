@@ -7,6 +7,13 @@
 //
 
 #import "IVKFeedViewController.h"
+#import "User.h"
+#import "Photo.h"
+#import "PhotoAlbum.h"
+#import "IVKSessionDataManager.h"
+#import "IVKFeedItem.h"
+#import "AppDelegate.h"
+#import "NSManagedObjectContext+EasyAccess.h"
 
 
 @implementation IVKFeedViewController 
@@ -24,16 +31,33 @@
 
 -(void)getFeedItems {
     NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:@"authToken"];
-    [IVKSessionDataManager GETRequestWithURL:@"https://api.vk.com/method/wall.get" parameters:@{@"access_token" : token} handler:^(NSData *data, NSURLResponse *response, NSError *error) {
+    [IVKSessionDataManager GETRequestWithURL:@"https://api.vk.com/method/newsfeed.get" parameters:@{@"access_token" : token} handler:^(NSData *data, NSURLResponse *response, NSError *error) {
         
         NSDictionary *feedItemsDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-        NSArray *items = [feedItemsDictionary objectForKey:@"response"];
+        NSArray *items = [[feedItemsDictionary objectForKey:@"response"] objectForKey:@"items"];
         
-        for(int i = 1; i < [items count]; i++){
-            NSDictionary *itemDict = items[i];
+        
+        
+        NSArray *profiles = [[feedItemsDictionary objectForKey:@"response"] objectForKey:@"profiles"];
+        
+        
+        for (NSDictionary *itemDict in profiles){                                                               /*vinesti v peremennuy*/
+            User *object = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:[NSManagedObjectContext defaultContext]];
+            object.id = itemDict[@"uid"];
+            object.firstName = itemDict[@"first_name"];
+            object.lastName = itemDict[@"last_name"];
+        }
+        
+        
+        
+        
+        for (NSDictionary *itemDict in items){
             IVKFeedItem *feedItem = [[IVKFeedItem alloc] initWithId:itemDict[@"id"] Date:itemDict[@"date"] PostType:itemDict[@"post_type"] Text:itemDict[@"text"]];
             [self.feedItems addObject:feedItem];
         }
+        
+        
+        [[NSManagedObjectContext defaultContext] save:nil];
         [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
     }];
 }
@@ -50,12 +74,6 @@
     }
     IVKFeedItem *item = self.feedItems[indexPath.row];
     [[cell textLabel] setText:[NSString stringWithFormat:@("Post type:%@, Text:%@"), [item postType], [item text]]];
-    
-    
-    UIView *tempView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 20, 20)];
-    [tempView setBackgroundColor:[UIColor blackColor]];
-    [cell addSubview:tempView];
-    
     
     return cell;
 }

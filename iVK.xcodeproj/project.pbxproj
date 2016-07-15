@@ -11,6 +11,14 @@
 		3F447A721D2AC32800378009 /* IVKSessionDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F447A711D2AC32800378009 /* IVKSessionDataManager.m */; };
 		3F5EABF91D26E17000E13F60 /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EABF81D26E17000E13F60 /* UIColor+CustomColors.m */; };
 		3F6F87CE1D1D92E50041D86E /* IVKSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F87CD1D1D92E50041D86E /* IVKSignUpViewController.m */; };
+		3F8B80731D3943F1008EA891 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B80711D3943F1008EA891 /* Model.xcdatamodeld */; };
+		3F8B80811D3949C8008EA891 /* Photo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B80761D3949C8008EA891 /* Photo+CoreDataProperties.m */; };
+		3F8B80821D3949C8008EA891 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B80781D3949C8008EA891 /* Photo.m */; };
+		3F8B80831D3949C8008EA891 /* PhotoAlbum+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B807A1D3949C8008EA891 /* PhotoAlbum+CoreDataProperties.m */; };
+		3F8B80841D3949C8008EA891 /* PhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B807C1D3949C8008EA891 /* PhotoAlbum.m */; };
+		3F8B80851D3949C8008EA891 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B807E1D3949C8008EA891 /* User+CoreDataProperties.m */; };
+		3F8B80861D3949C8008EA891 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B80801D3949C8008EA891 /* User.m */; };
+		3F8B80891D3952D7008EA891 /* NSManagedObjectContext+EasyAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B80881D3952D7008EA891 /* NSManagedObjectContext+EasyAccess.m */; };
 		3FD3AA631D14650D007918DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3AA621D14650D007918DA /* main.m */; };
 		3FD3AA661D14650D007918DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3AA651D14650D007918DA /* AppDelegate.m */; };
 		3FD3AA6E1D14650D007918DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3AA6D1D14650D007918DA /* Assets.xcassets */; };
@@ -27,6 +35,21 @@
 		3F5EABF81D26E17000E13F60 /* UIColor+CustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
 		3F6F87CC1D1D92E50041D86E /* IVKSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IVKSignUpViewController.h; path = ../IVKSignUpViewController.h; sourceTree = "<group>"; };
 		3F6F87CD1D1D92E50041D86E /* IVKSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IVKSignUpViewController.m; path = ../IVKSignUpViewController.m; sourceTree = "<group>"; };
+		3F8B80721D3943F1008EA891 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		3F8B80751D3949C8008EA891 /* Photo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Photo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		3F8B80761D3949C8008EA891 /* Photo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Photo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		3F8B80771D3949C8008EA891 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		3F8B80781D3949C8008EA891 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		3F8B80791D3949C8008EA891 /* PhotoAlbum+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PhotoAlbum+CoreDataProperties.h"; sourceTree = "<group>"; };
+		3F8B807A1D3949C8008EA891 /* PhotoAlbum+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PhotoAlbum+CoreDataProperties.m"; sourceTree = "<group>"; };
+		3F8B807B1D3949C8008EA891 /* PhotoAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoAlbum.h; sourceTree = "<group>"; };
+		3F8B807C1D3949C8008EA891 /* PhotoAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoAlbum.m; sourceTree = "<group>"; };
+		3F8B807D1D3949C8008EA891 /* User+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataProperties.h"; sourceTree = "<group>"; };
+		3F8B807E1D3949C8008EA891 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataProperties.m"; sourceTree = "<group>"; };
+		3F8B807F1D3949C8008EA891 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		3F8B80801D3949C8008EA891 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		3F8B80871D3952D7008EA891 /* NSManagedObjectContext+EasyAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+EasyAccess.h"; sourceTree = "<group>"; };
+		3F8B80881D3952D7008EA891 /* NSManagedObjectContext+EasyAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+EasyAccess.m"; sourceTree = "<group>"; };
 		3FD3AA5E1D14650D007918DA /* iVK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iVK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD3AA621D14650D007918DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3FD3AA641D14650D007918DA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,6 +85,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3F8B80741D39498F008EA891 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				3F8B80751D3949C8008EA891 /* Photo+CoreDataProperties.h */,
+				3F8B80761D3949C8008EA891 /* Photo+CoreDataProperties.m */,
+				3F8B80771D3949C8008EA891 /* Photo.h */,
+				3F8B80781D3949C8008EA891 /* Photo.m */,
+				3F8B80791D3949C8008EA891 /* PhotoAlbum+CoreDataProperties.h */,
+				3F8B807A1D3949C8008EA891 /* PhotoAlbum+CoreDataProperties.m */,
+				3F8B807B1D3949C8008EA891 /* PhotoAlbum.h */,
+				3F8B807C1D3949C8008EA891 /* PhotoAlbum.m */,
+				3F8B807D1D3949C8008EA891 /* User+CoreDataProperties.h */,
+				3F8B807E1D3949C8008EA891 /* User+CoreDataProperties.m */,
+				3F8B807F1D3949C8008EA891 /* User.h */,
+				3F8B80801D3949C8008EA891 /* User.m */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
 		3FD3AA551D14650D007918DA = {
 			isa = PBXGroup;
 			children = (
@@ -83,9 +125,12 @@
 		3FD3AA601D14650D007918DA /* iVK */ = {
 			isa = PBXGroup;
 			children = (
+				3F8B80741D39498F008EA891 /* Entities */,
 				3F6F87CC1D1D92E50041D86E /* IVKSignUpViewController.h */,
 				3F6F87CD1D1D92E50041D86E /* IVKSignUpViewController.m */,
 				3FD3AA641D14650D007918DA /* AppDelegate.h */,
+				3F8B80871D3952D7008EA891 /* NSManagedObjectContext+EasyAccess.h */,
+				3F8B80881D3952D7008EA891 /* NSManagedObjectContext+EasyAccess.m */,
 				3FD3AA651D14650D007918DA /* AppDelegate.m */,
 				3FD3AA6D1D14650D007918DA /* Assets.xcassets */,
 				3FD3AA6F1D14650D007918DA /* LaunchScreen.storyboard */,
@@ -99,6 +144,7 @@
 				3FD5382C1D3023FA00DE9419 /* IVKFeedViewController.m */,
 				DDAA1FA71D3263D30002F3CE /* IVKFeedItem.h */,
 				DDAA1FA81D3263D30002F3CE /* IVKFeedItem.m */,
+				3F8B80711D3943F1008EA891 /* Model.xcdatamodeld */,
 			);
 			path = iVK;
 			sourceTree = "<group>";
@@ -240,12 +286,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F8B80891D3952D7008EA891 /* NSManagedObjectContext+EasyAccess.m in Sources */,
 				DDAA1FA91D3263D30002F3CE /* IVKFeedItem.m in Sources */,
 				3F5EABF91D26E17000E13F60 /* UIColor+CustomColors.m in Sources */,
+				3F8B80841D3949C8008EA891 /* PhotoAlbum.m in Sources */,
 				3F6F87CE1D1D92E50041D86E /* IVKSignUpViewController.m in Sources */,
+				3F8B80811D3949C8008EA891 /* Photo+CoreDataProperties.m in Sources */,
+				3F8B80851D3949C8008EA891 /* User+CoreDataProperties.m in Sources */,
+				3F8B80831D3949C8008EA891 /* PhotoAlbum+CoreDataProperties.m in Sources */,
+				3F8B80731D3943F1008EA891 /* Model.xcdatamodeld in Sources */,
+				3F8B80861D3949C8008EA891 /* User.m in Sources */,
 				3FD3AA661D14650D007918DA /* AppDelegate.m in Sources */,
 				3FD5382D1D3023FA00DE9419 /* IVKFeedViewController.m in Sources */,
 				3F447A721D2AC32800378009 /* IVKSessionDataManager.m in Sources */,
+				3F8B80821D3949C8008EA891 /* Photo.m in Sources */,
 				3FD3AA631D14650D007918DA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,6 +448,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3F8B80711D3943F1008EA891 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3F8B80721D3943F1008EA891 /* Model.xcdatamodel */,
+			);
+			currentVersion = 3F8B80721D3943F1008EA891 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3FD3AA561D14650D007918DA /* Project object */;
 }

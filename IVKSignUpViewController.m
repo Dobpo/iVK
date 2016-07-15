@@ -156,13 +156,14 @@ NSString *secretKey = @"JMKm7SlQ74mWEe9JlZN7";
                                  @"test_mode":@1
                                  };
    [IVKSessionDataManager POSTRequestWithURL:@"https://api.vk.com/method/auth.signup" parameters:dictionary handler:^(NSData *data, NSURLResponse *response, NSError *error) {
-       NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+       //NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 
-       id o = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+       //id o = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
        
-       NSDictionary *jsonAnswerDictionary = [NSJSONSerialization JSONObjectWithData:data
+       /*NSDictionary *jsonAnswerDictionary = [NSJSONSerialization JSONObjectWithData:data
                                                             options:NSJSONReadingMutableContainers
                                                               error:nil];
+        */
    }];
 }
 

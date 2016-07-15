@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <VKSdk.h>
+@import CoreData;
 
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
@@ -15,6 +16,11 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) VKSdk *sdkInst;
 
+@property (strong) NSManagedObjectContext *managedObjectContext;
+
+- (void)initializeCoreData;
+
 - (void)logIn;
 
 @end
+

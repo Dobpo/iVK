@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "IVKSessionDataManager.h"
-#import "IVKFeedItem.h"
+
+
 @import UIKit;
 
 @interface IVKFeedViewController : UIViewController <UITableViewDataSource>
