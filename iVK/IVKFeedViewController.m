@@ -10,6 +10,7 @@
 #import "User.h"
 #import "Photo.h"
 #import "PhotoAlbum.h"
+#import "PhotoPost.h"
 #import "IVKSessionDataManager.h"
 #import "IVKFeedItem.h"
 #import "AppDelegate.h"
@@ -45,20 +46,24 @@
         
         NSArray *items = [[feedItemsDictionary objectForKey:@"response"] objectForKey:@"items"];
         for (NSDictionary *item in  items) {
-            NSDictionary *attDict = item[@"attachment"];
-            NSString *type = attDict[@"type"];
+            NSDictionary *attachmentDict = item[@"attachment"];
+            NSString *type = attachmentDict[@"type"];
+            
             if([type isEqualToString:@"photo"]){
                 Photo *photoObj = [NSEntityDescription insertNewObjectForEntityForName:@"Photo" inManagedObjectContext:[NSManagedObjectContext defaultContext]];
+                PhotoPost *photoPostObj = [NSEntityDescription insertNewObjectForEntityForName:@"PhotoPost" inManagedObjectContext:[NSManagedObjectContext defaultContext]];
+    
                 
-                photoObj.id = attDict[@"photo"][@"pid"];
-                photoObj.url = attDict[@"photo"][@"src"];
-                photoObj.width = attDict[@"photo"][@"width"];
-                photoObj.height = attDict[@"photo"][@"height"];
-                photoObj.text = attDict[@"photo"][@"text"];
-                NSTimeInterval timeInterval = [attDict[@"photo"][@"created"] longLongValue];
+                photoObj.id = attachmentDict[@"photo"][@"pid"];
+                photoObj.url = attachmentDict[@"photo"][@"src"];
+                photoObj.width = attachmentDict[@"photo"][@"width"];
+                photoObj.height = attachmentDict[@"photo"][@"height"];
+                photoObj.text = attachmentDict[@"photo"][@"text"];
+                
+                NSTimeInterval timeInterval = [attachmentDict[@"photo"][@"created"] doubleValue];
                 photoObj.created = [NSDate dateWithTimeIntervalSince1970:timeInterval];
                 
-                NSNumber *ownerId = attDict[@"photo"][@"owner_id"];
+                NSNumber *ownerId = attachmentDict[@"photo"][@"owner_id"];
                 NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"User"];
                 fetchRequest.predicate = [NSPredicate predicateWithFormat:@"id == %@", ownerId];
                 [fetchRequest setFetchLimit:1];
@@ -69,6 +74,15 @@
                     [owner addCreatedPhotosObject:photoObj];
                     [photoObj setOwner:owner];
                 }
+                
+                photoPostObj.id = item[@"post_id"];
+                photoPostObj.text = item[@"text"];
+                timeInterval = [item[@"date"] doubleValue];
+                photoPostObj.created = [NSDate dateWithTimeIntervalSince1970:timeInterval];
+                photoPostObj.type = item[@"type"];
+                ////Dodelai
+                
+                photoPostObj.owner = item[@"post_id"];                //@property (nullable, nonatomic, retain) NSSet<Photo *> *photos;
             }
         }
         

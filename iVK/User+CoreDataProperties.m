@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.m
 //  iVK
 //
-//  Created by Student on 7/15/16.
+//  Created by Student on 7/18/16.
 //  Copyright © 2016 Student. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -13,10 +13,11 @@
 
 @implementation User (CoreDataProperties)
 
-@dynamic id;
 @dynamic firstName;
+@dynamic id;
 @dynamic lastName;
-@dynamic createdPhotos;
 @dynamic createdPhotoAlbums;
+@dynamic createdPhotos;
+@dynamic createdPosts;
 
 @end

@@ -9,15 +9,17 @@
 /* Begin PBXBuildFile section */
 		1B301AA054460950E8EE2928 /* libPods-iVK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E3D2087EC2940A5DE8D67A /* libPods-iVK.a */; };
 		3F447A721D2AC32800378009 /* IVKSessionDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F447A711D2AC32800378009 /* IVKSessionDataManager.m */; };
+		3F4DF0601D3D54DC00F8677B /* Photo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4DF0511D3D54DC00F8677B /* Photo+CoreDataProperties.m */; };
+		3F4DF0611D3D54DC00F8677B /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4DF0531D3D54DC00F8677B /* Photo.m */; };
+		3F4DF0621D3D54DC00F8677B /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4DF0551D3D54DC00F8677B /* User+CoreDataProperties.m */; };
+		3F4DF0631D3D54DC00F8677B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4DF0571D3D54DC00F8677B /* User.m */; };
+		3F4DF0661D3D54DC00F8677B /* PhotoAlbum+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4DF05D1D3D54DC00F8677B /* PhotoAlbum+CoreDataProperties.m */; };
+		3F4DF0671D3D54DC00F8677B /* PhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4DF05F1D3D54DC00F8677B /* PhotoAlbum.m */; };
+		3F4DF0721D3D562600F8677B /* PhotoPost+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4DF06F1D3D562600F8677B /* PhotoPost+CoreDataProperties.m */; };
+		3F4DF0731D3D562600F8677B /* PhotoPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4DF0711D3D562600F8677B /* PhotoPost.m */; };
 		3F5EABF91D26E17000E13F60 /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EABF81D26E17000E13F60 /* UIColor+CustomColors.m */; };
 		3F6F87CE1D1D92E50041D86E /* IVKSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F87CD1D1D92E50041D86E /* IVKSignUpViewController.m */; };
 		3F8B80731D3943F1008EA891 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B80711D3943F1008EA891 /* Model.xcdatamodeld */; };
-		3F8B80811D3949C8008EA891 /* Photo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B80761D3949C8008EA891 /* Photo+CoreDataProperties.m */; };
-		3F8B80821D3949C8008EA891 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B80781D3949C8008EA891 /* Photo.m */; };
-		3F8B80831D3949C8008EA891 /* PhotoAlbum+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B807A1D3949C8008EA891 /* PhotoAlbum+CoreDataProperties.m */; };
-		3F8B80841D3949C8008EA891 /* PhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B807C1D3949C8008EA891 /* PhotoAlbum.m */; };
-		3F8B80851D3949C8008EA891 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B807E1D3949C8008EA891 /* User+CoreDataProperties.m */; };
-		3F8B80861D3949C8008EA891 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B80801D3949C8008EA891 /* User.m */; };
 		3F8B80891D3952D7008EA891 /* NSManagedObjectContext+EasyAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B80881D3952D7008EA891 /* NSManagedObjectContext+EasyAccess.m */; };
 		3FD3AA631D14650D007918DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3AA621D14650D007918DA /* main.m */; };
 		3FD3AA661D14650D007918DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3AA651D14650D007918DA /* AppDelegate.m */; };
@@ -31,23 +33,27 @@
 		07E3A6FF703C37634865AE09 /* Pods-iVK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iVK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iVK/Pods-iVK.debug.xcconfig"; sourceTree = "<group>"; };
 		3F447A701D2AC32800378009 /* IVKSessionDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVKSessionDataManager.h; sourceTree = "<group>"; };
 		3F447A711D2AC32800378009 /* IVKSessionDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVKSessionDataManager.m; sourceTree = "<group>"; };
+		3F4DF0501D3D54DC00F8677B /* Photo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Photo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		3F4DF0511D3D54DC00F8677B /* Photo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Photo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		3F4DF0521D3D54DC00F8677B /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		3F4DF0531D3D54DC00F8677B /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		3F4DF0541D3D54DC00F8677B /* User+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataProperties.h"; sourceTree = "<group>"; };
+		3F4DF0551D3D54DC00F8677B /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataProperties.m"; sourceTree = "<group>"; };
+		3F4DF0561D3D54DC00F8677B /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		3F4DF0571D3D54DC00F8677B /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		3F4DF05C1D3D54DC00F8677B /* PhotoAlbum+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PhotoAlbum+CoreDataProperties.h"; sourceTree = "<group>"; };
+		3F4DF05D1D3D54DC00F8677B /* PhotoAlbum+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PhotoAlbum+CoreDataProperties.m"; sourceTree = "<group>"; };
+		3F4DF05E1D3D54DC00F8677B /* PhotoAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoAlbum.h; sourceTree = "<group>"; };
+		3F4DF05F1D3D54DC00F8677B /* PhotoAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoAlbum.m; sourceTree = "<group>"; };
+		3F4DF06E1D3D562600F8677B /* PhotoPost+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PhotoPost+CoreDataProperties.h"; sourceTree = "<group>"; };
+		3F4DF06F1D3D562600F8677B /* PhotoPost+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PhotoPost+CoreDataProperties.m"; sourceTree = "<group>"; };
+		3F4DF0701D3D562600F8677B /* PhotoPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoPost.h; sourceTree = "<group>"; };
+		3F4DF0711D3D562600F8677B /* PhotoPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoPost.m; sourceTree = "<group>"; };
 		3F5EABF71D26E17000E13F60 /* UIColor+CustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColors.h"; sourceTree = "<group>"; };
 		3F5EABF81D26E17000E13F60 /* UIColor+CustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
 		3F6F87CC1D1D92E50041D86E /* IVKSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IVKSignUpViewController.h; path = ../IVKSignUpViewController.h; sourceTree = "<group>"; };
 		3F6F87CD1D1D92E50041D86E /* IVKSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IVKSignUpViewController.m; path = ../IVKSignUpViewController.m; sourceTree = "<group>"; };
 		3F8B80721D3943F1008EA891 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		3F8B80751D3949C8008EA891 /* Photo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Photo+CoreDataProperties.h"; sourceTree = "<group>"; };
-		3F8B80761D3949C8008EA891 /* Photo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Photo+CoreDataProperties.m"; sourceTree = "<group>"; };
-		3F8B80771D3949C8008EA891 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
-		3F8B80781D3949C8008EA891 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
-		3F8B80791D3949C8008EA891 /* PhotoAlbum+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PhotoAlbum+CoreDataProperties.h"; sourceTree = "<group>"; };
-		3F8B807A1D3949C8008EA891 /* PhotoAlbum+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PhotoAlbum+CoreDataProperties.m"; sourceTree = "<group>"; };
-		3F8B807B1D3949C8008EA891 /* PhotoAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoAlbum.h; sourceTree = "<group>"; };
-		3F8B807C1D3949C8008EA891 /* PhotoAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoAlbum.m; sourceTree = "<group>"; };
-		3F8B807D1D3949C8008EA891 /* User+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataProperties.h"; sourceTree = "<group>"; };
-		3F8B807E1D3949C8008EA891 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataProperties.m"; sourceTree = "<group>"; };
-		3F8B807F1D3949C8008EA891 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		3F8B80801D3949C8008EA891 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		3F8B80871D3952D7008EA891 /* NSManagedObjectContext+EasyAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+EasyAccess.h"; sourceTree = "<group>"; };
 		3F8B80881D3952D7008EA891 /* NSManagedObjectContext+EasyAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+EasyAccess.m"; sourceTree = "<group>"; };
 		3FD3AA5E1D14650D007918DA /* iVK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iVK.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,18 +94,22 @@
 		3F8B80741D39498F008EA891 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				3F8B80751D3949C8008EA891 /* Photo+CoreDataProperties.h */,
-				3F8B80761D3949C8008EA891 /* Photo+CoreDataProperties.m */,
-				3F8B80771D3949C8008EA891 /* Photo.h */,
-				3F8B80781D3949C8008EA891 /* Photo.m */,
-				3F8B80791D3949C8008EA891 /* PhotoAlbum+CoreDataProperties.h */,
-				3F8B807A1D3949C8008EA891 /* PhotoAlbum+CoreDataProperties.m */,
-				3F8B807B1D3949C8008EA891 /* PhotoAlbum.h */,
-				3F8B807C1D3949C8008EA891 /* PhotoAlbum.m */,
-				3F8B807D1D3949C8008EA891 /* User+CoreDataProperties.h */,
-				3F8B807E1D3949C8008EA891 /* User+CoreDataProperties.m */,
-				3F8B807F1D3949C8008EA891 /* User.h */,
-				3F8B80801D3949C8008EA891 /* User.m */,
+				3F4DF0501D3D54DC00F8677B /* Photo+CoreDataProperties.h */,
+				3F4DF0511D3D54DC00F8677B /* Photo+CoreDataProperties.m */,
+				3F4DF0521D3D54DC00F8677B /* Photo.h */,
+				3F4DF0531D3D54DC00F8677B /* Photo.m */,
+				3F4DF0541D3D54DC00F8677B /* User+CoreDataProperties.h */,
+				3F4DF0551D3D54DC00F8677B /* User+CoreDataProperties.m */,
+				3F4DF0561D3D54DC00F8677B /* User.h */,
+				3F4DF0571D3D54DC00F8677B /* User.m */,
+				3F4DF05C1D3D54DC00F8677B /* PhotoAlbum+CoreDataProperties.h */,
+				3F4DF05D1D3D54DC00F8677B /* PhotoAlbum+CoreDataProperties.m */,
+				3F4DF05E1D3D54DC00F8677B /* PhotoAlbum.h */,
+				3F4DF05F1D3D54DC00F8677B /* PhotoAlbum.m */,
+				3F4DF06E1D3D562600F8677B /* PhotoPost+CoreDataProperties.h */,
+				3F4DF06F1D3D562600F8677B /* PhotoPost+CoreDataProperties.m */,
+				3F4DF0701D3D562600F8677B /* PhotoPost.h */,
+				3F4DF0711D3D562600F8677B /* PhotoPost.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -286,20 +296,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F4DF0661D3D54DC00F8677B /* PhotoAlbum+CoreDataProperties.m in Sources */,
+				3F4DF0731D3D562600F8677B /* PhotoPost.m in Sources */,
+				3F4DF0631D3D54DC00F8677B /* User.m in Sources */,
 				3F8B80891D3952D7008EA891 /* NSManagedObjectContext+EasyAccess.m in Sources */,
 				DDAA1FA91D3263D30002F3CE /* IVKFeedItem.m in Sources */,
+				3F4DF0721D3D562600F8677B /* PhotoPost+CoreDataProperties.m in Sources */,
 				3F5EABF91D26E17000E13F60 /* UIColor+CustomColors.m in Sources */,
-				3F8B80841D3949C8008EA891 /* PhotoAlbum.m in Sources */,
 				3F6F87CE1D1D92E50041D86E /* IVKSignUpViewController.m in Sources */,
-				3F8B80811D3949C8008EA891 /* Photo+CoreDataProperties.m in Sources */,
-				3F8B80851D3949C8008EA891 /* User+CoreDataProperties.m in Sources */,
-				3F8B80831D3949C8008EA891 /* PhotoAlbum+CoreDataProperties.m in Sources */,
+				3F4DF0601D3D54DC00F8677B /* Photo+CoreDataProperties.m in Sources */,
 				3F8B80731D3943F1008EA891 /* Model.xcdatamodeld in Sources */,
-				3F8B80861D3949C8008EA891 /* User.m in Sources */,
+				3F4DF0621D3D54DC00F8677B /* User+CoreDataProperties.m in Sources */,
 				3FD3AA661D14650D007918DA /* AppDelegate.m in Sources */,
 				3FD5382D1D3023FA00DE9419 /* IVKFeedViewController.m in Sources */,
+				3F4DF0671D3D54DC00F8677B /* PhotoAlbum.m in Sources */,
+				3F4DF0611D3D54DC00F8677B /* Photo.m in Sources */,
 				3F447A721D2AC32800378009 /* IVKSessionDataManager.m in Sources */,
-				3F8B80821D3949C8008EA891 /* Photo.m in Sources */,
 				3FD3AA631D14650D007918DA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  PhotoAlbum+CoreDataProperties.h
+//  PhotoPost+CoreDataProperties.h
 //  iVK
 //
 //  Created by Student on 7/18/16.
@@ -9,26 +9,26 @@
 //  to delete and recreate this implementation file for your updated model.
 //
 
-#import "PhotoAlbum.h"
+#import "PhotoPost.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PhotoAlbum (CoreDataProperties)
+@interface PhotoPost (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) NSDate *created;
 @property (nullable, nonatomic, retain) NSNumber *id;
 @property (nullable, nonatomic, retain) NSString *text;
-@property (nullable, nonatomic, retain) NSString *title;
+@property (nullable, nonatomic, retain) NSDate *created;
+@property (nullable, nonatomic, retain) NSString *type;
 @property (nullable, nonatomic, retain) User *owner;
 @property (nullable, nonatomic, retain) NSSet<Photo *> *photos;
-@property (nullable, nonatomic, retain) Photo *thumbnail;
 
 @end
 
-@interface PhotoAlbum (CoreDataGeneratedAccessors)
+@interface PhotoPost (CoreDataGeneratedAccessors)
 
 - (void)addPhotosObject:(Photo *)value;
 - (void)removePhotosObject:(Photo *)value;
+
 - (void)addPhotos:(NSSet<Photo *> *)values;
 - (void)removePhotos:(NSSet<Photo *> *)values;
 

@@ -1,5 +1,5 @@
 //
-//  PhotoAlbum+CoreDataProperties.m
+//  PhotoPost+CoreDataProperties.m
 //  iVK
 //
 //  Created by Student on 7/18/16.
@@ -9,16 +9,15 @@
 //  to delete and recreate this implementation file for your updated model.
 //
 
-#import "PhotoAlbum+CoreDataProperties.h"
+#import "PhotoPost+CoreDataProperties.h"
 
-@implementation PhotoAlbum (CoreDataProperties)
+@implementation PhotoPost (CoreDataProperties)
 
-@dynamic created;
 @dynamic id;
 @dynamic text;
-@dynamic title;
+@dynamic created;
+@dynamic type;
 @dynamic owner;
 @dynamic photos;
-@dynamic thumbnail;
 
 @end
