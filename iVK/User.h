@@ -2,14 +2,14 @@
 //  User.h
 //  iVK
 //
-//  Created by Student on 7/18/16.
+//  Created by Alex on 7/18/16.
 //  Copyright © 2016 Student. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Photo, PhotoAlbum, Post;
+@class Photo, PhotoAlbum;
 
 NS_ASSUME_NONNULL_BEGIN
 

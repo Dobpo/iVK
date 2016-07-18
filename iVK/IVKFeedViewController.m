@@ -52,8 +52,7 @@
             if([type isEqualToString:@"photo"]){
                 Photo *photoObj = [NSEntityDescription insertNewObjectForEntityForName:@"Photo" inManagedObjectContext:[NSManagedObjectContext defaultContext]];
                 PhotoPost *photoPostObj = [NSEntityDescription insertNewObjectForEntityForName:@"PhotoPost" inManagedObjectContext:[NSManagedObjectContext defaultContext]];
-    
-                
+                    
                 photoObj.id = attachmentDict[@"photo"][@"pid"];
                 photoObj.url = attachmentDict[@"photo"][@"src"];
                 photoObj.width = attachmentDict[@"photo"][@"width"];
@@ -80,9 +79,8 @@
                 timeInterval = [item[@"date"] doubleValue];
                 photoPostObj.created = [NSDate dateWithTimeIntervalSince1970:timeInterval];
                 photoPostObj.type = item[@"type"];
-                ////Dodelai
                 
-                photoPostObj.owner = item[@"post_id"];                //@property (nullable, nonatomic, retain) NSSet<Photo *> *photos;
+                [photoPostObj addPhotosObject:photoObj];
             }
         }
         

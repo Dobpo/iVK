@@ -2,7 +2,7 @@
 //  Photo.m
 //  iVK
 //
-//  Created by Student on 7/18/16.
+//  Created by Alex on 7/18/16.
 //  Copyright © 2016 Student. All rights reserved.
 //
 
