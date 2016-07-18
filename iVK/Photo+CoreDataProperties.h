@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, retain) PhotoAlbum *album;
 @property (nullable, nonatomic, retain) User *owner;
-@property (nullable, nonatomic, retain) NSManagedObject *albumCover;
+@property (nullable, nonatomic, retain) Photo *albumCover;
 
 @end
 
