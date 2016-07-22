@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class PhotoAlbum, Post, User;
+@class PhotoAlbum, PhotoPost, User;
 
 NS_ASSUME_NONNULL_BEGIN
 

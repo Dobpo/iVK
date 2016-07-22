@@ -21,12 +21,12 @@
 		3F6F87CE1D1D92E50041D86E /* IVKSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F87CD1D1D92E50041D86E /* IVKSignUpViewController.m */; };
 		3F8B80731D3943F1008EA891 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B80711D3943F1008EA891 /* Model.xcdatamodeld */; };
 		3F8B80891D3952D7008EA891 /* NSManagedObjectContext+EasyAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B80881D3952D7008EA891 /* NSManagedObjectContext+EasyAccess.m */; };
+		3FB860BE1D4287330069B225 /* PostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB860BD1D4287330069B225 /* PostTableViewCell.m */; };
 		3FD3AA631D14650D007918DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3AA621D14650D007918DA /* main.m */; };
 		3FD3AA661D14650D007918DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3AA651D14650D007918DA /* AppDelegate.m */; };
 		3FD3AA6E1D14650D007918DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3AA6D1D14650D007918DA /* Assets.xcassets */; };
 		3FD3AA711D14650D007918DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3AA6F1D14650D007918DA /* LaunchScreen.storyboard */; };
 		3FD5382D1D3023FA00DE9419 /* IVKFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD5382C1D3023FA00DE9419 /* IVKFeedViewController.m */; };
-		DDAA1FA91D3263D30002F3CE /* IVKFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAA1FA81D3263D30002F3CE /* IVKFeedItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +56,8 @@
 		3F8B80721D3943F1008EA891 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		3F8B80871D3952D7008EA891 /* NSManagedObjectContext+EasyAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+EasyAccess.h"; sourceTree = "<group>"; };
 		3F8B80881D3952D7008EA891 /* NSManagedObjectContext+EasyAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+EasyAccess.m"; sourceTree = "<group>"; };
+		3FB860BC1D4287330069B225 /* PostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostTableViewCell.h; sourceTree = "<group>"; };
+		3FB860BD1D4287330069B225 /* PostTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostTableViewCell.m; sourceTree = "<group>"; };
 		3FD3AA5E1D14650D007918DA /* iVK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iVK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD3AA621D14650D007918DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3FD3AA641D14650D007918DA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,8 +69,6 @@
 		3FD5382C1D3023FA00DE9419 /* IVKFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVKFeedViewController.m; sourceTree = "<group>"; };
 		82AA1BF2151F39A953035BFF /* Pods-iVK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iVK.release.xcconfig"; path = "Pods/Target Support Files/Pods-iVK/Pods-iVK.release.xcconfig"; sourceTree = "<group>"; };
 		D1E3D2087EC2940A5DE8D67A /* libPods-iVK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iVK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DDAA1FA71D3263D30002F3CE /* IVKFeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVKFeedItem.h; sourceTree = "<group>"; };
-		DDAA1FA81D3263D30002F3CE /* IVKFeedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVKFeedItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,9 +152,9 @@
 				3F447A711D2AC32800378009 /* IVKSessionDataManager.m */,
 				3FD5382B1D3023FA00DE9419 /* IVKFeedViewController.h */,
 				3FD5382C1D3023FA00DE9419 /* IVKFeedViewController.m */,
-				DDAA1FA71D3263D30002F3CE /* IVKFeedItem.h */,
-				DDAA1FA81D3263D30002F3CE /* IVKFeedItem.m */,
 				3F8B80711D3943F1008EA891 /* Model.xcdatamodeld */,
+				3FB860BC1D4287330069B225 /* PostTableViewCell.h */,
+				3FB860BD1D4287330069B225 /* PostTableViewCell.m */,
 			);
 			path = iVK;
 			sourceTree = "<group>";
@@ -300,11 +300,11 @@
 				3F4DF0731D3D562600F8677B /* PhotoPost.m in Sources */,
 				3F4DF0631D3D54DC00F8677B /* User.m in Sources */,
 				3F8B80891D3952D7008EA891 /* NSManagedObjectContext+EasyAccess.m in Sources */,
-				DDAA1FA91D3263D30002F3CE /* IVKFeedItem.m in Sources */,
 				3F4DF0721D3D562600F8677B /* PhotoPost+CoreDataProperties.m in Sources */,
 				3F5EABF91D26E17000E13F60 /* UIColor+CustomColors.m in Sources */,
 				3F6F87CE1D1D92E50041D86E /* IVKSignUpViewController.m in Sources */,
 				3F4DF0601D3D54DC00F8677B /* Photo+CoreDataProperties.m in Sources */,
+				3FB860BE1D4287330069B225 /* PostTableViewCell.m in Sources */,
 				3F8B80731D3943F1008EA891 /* Model.xcdatamodeld in Sources */,
 				3F4DF0621D3D54DC00F8677B /* User+CoreDataProperties.m in Sources */,
 				3FD3AA661D14650D007918DA /* AppDelegate.m in Sources */,

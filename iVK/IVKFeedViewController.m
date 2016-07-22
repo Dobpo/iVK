@@ -12,9 +12,10 @@
 #import "PhotoAlbum.h"
 #import "PhotoPost.h"
 #import "IVKSessionDataManager.h"
-#import "IVKFeedItem.h"
 #import "AppDelegate.h"
 #import "NSManagedObjectContext+EasyAccess.h"
+#import "PostTableViewCell.h"
+@import CoreText;
 
 
 @implementation IVKFeedViewController 
@@ -26,7 +27,8 @@
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [self.tableView setDataSource:self];
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
+    [self.tableView setDelegate:self];
+    [self.tableView registerClass:[PostTableViewCell class] forCellReuseIdentifier:@"PostTableViewCell"];
     [self.view addSubview:self.tableView];
 }
 
@@ -51,7 +53,7 @@
             
             if([type isEqualToString:@"photo"]){
                 Photo *photoObj = [NSEntityDescription insertNewObjectForEntityForName:@"Photo" inManagedObjectContext:[NSManagedObjectContext defaultContext]];
-                PhotoPost *photoPostObj = [NSEntityDescription insertNewObjectForEntityForName:@"PhotoPost" inManagedObjectContext:[NSManagedObjectContext defaultContext]];
+                
     
                 
                 photoObj.id = attachmentDict[@"photo"][@"pid"];
@@ -75,23 +77,26 @@
                     [photoObj setOwner:owner];
                 }
                 
+                if([self photoPostNotExist:item[@"post_id"]]){
+                PhotoPost *photoPostObj = [NSEntityDescription insertNewObjectForEntityForName:@"PhotoPost" inManagedObjectContext:[NSManagedObjectContext defaultContext]];
                 photoPostObj.id = item[@"post_id"];
                 photoPostObj.text = item[@"text"];
                 timeInterval = [item[@"date"] doubleValue];
                 photoPostObj.created = [NSDate dateWithTimeIntervalSince1970:timeInterval];
-                photoPostObj.type = item[@"type"];
-                ////Dodelai
-                
-                photoPostObj.owner = item[@"post_id"];                //@property (nullable, nonatomic, retain) NSSet<Photo *> *photos;
+                photoPostObj.type = type;
+                [photoPostObj addPhotosObject:photoObj];
+                [photoObj addWasPostedInObject:photoPostObj];
+                    NSLog(@"s");
+                }
             }
         }
         
-        for (NSDictionary *itemDict in items){
-            IVKFeedItem *feedItem = [[IVKFeedItem alloc] initWithId:itemDict[@"id"] Date:itemDict[@"date"] PostType:itemDict[@"post_type"] Text:itemDict[@"text"]];
-            [self.feedItems addObject:feedItem];
-        }
-        
         [[NSManagedObjectContext defaultContext] save:nil];
+        
+        NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"PhotoPost"];
+        NSArray *arr = [[NSManagedObjectContext defaultContext] executeFetchRequest:fetchRequest error:nil];
+        [self.feedItems setArray:arr];
+        
         [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
     }];
 }
@@ -100,18 +105,57 @@
     return [self.feedItems count];
 }
 
+-(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+    PhotoPost *item = self.feedItems[indexPath.row];
+    Photo *photo = [item.photos anyObject];
+    
+    NSString *text = item.text;
+    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:[photo url]]];
+    UIImage *image = [UIImage imageWithData:data];
+    
+    UIFont *font = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    NSDictionary *attributes = @{NSFontAttributeName: font};
+    CGRect rect = [text boundingRectWithSize:CGSizeMake(self.tableView.frame.size.width, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil];
+    
+    return image.size.height + rect.size.height;
+    
+}
+
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    __kindof UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
-    if(cell == nil){
+    PostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostTableViewCell" forIndexPath:indexPath];
+    
+    PhotoPost *item = self.feedItems[indexPath.row];
+    Photo *photo = [item.photos anyObject];
+    
+    cell.textView.text = item.text;
+    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:[photo url]]];
+    cell.imageView.image = [UIImage imageWithData:data];
+    
+    /*if(cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                    reuseIdentifier:@"UITableViewCell"];
     }
-    IVKFeedItem *item = self.feedItems[indexPath.row];
-    [[cell textLabel] setText:[NSString stringWithFormat:@("Post type:%@, Text:%@"), [item postType], [item text]]];
+    PhotoPost *item = self.feedItems[indexPath.row];
+    [[cell textLabel] setText:[NSString stringWithFormat:@("Post type:%@, Text:%@"), [item type], [item text]]];*/
+    
+    
     
     return cell;
 }
 
+-(BOOL)photoPostNotExist:(NSNumber *)postId{
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"PhotoPost"];
+    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"id == %@", postId];
+    [fetchRequest setFetchLimit:1];
+    NSArray *array = [[NSManagedObjectContext defaultContext] executeFetchRequest:fetchRequest error:nil];
+    PhotoPost *photoPost = [array firstObject];
+    
+    if(photoPost == nil){
+        return YES;
+    }else{
+        return NO;
+    }
+}
 @end
 
 
