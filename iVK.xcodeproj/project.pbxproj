@@ -27,6 +27,7 @@
 		3FD3AA6E1D14650D007918DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3AA6D1D14650D007918DA /* Assets.xcassets */; };
 		3FD3AA711D14650D007918DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3AA6F1D14650D007918DA /* LaunchScreen.storyboard */; };
 		3FD5382D1D3023FA00DE9419 /* IVKFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD5382C1D3023FA00DE9419 /* IVKFeedViewController.m */; };
+		3FF4814F1D468F1B0003840D /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF4814E1D468F1B0003840D /* PostTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		3FD3AA721D14650D007918DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FD5382B1D3023FA00DE9419 /* IVKFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVKFeedViewController.h; sourceTree = "<group>"; };
 		3FD5382C1D3023FA00DE9419 /* IVKFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVKFeedViewController.m; sourceTree = "<group>"; };
+		3FF4814E1D468F1B0003840D /* PostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		82AA1BF2151F39A953035BFF /* Pods-iVK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iVK.release.xcconfig"; path = "Pods/Target Support Files/Pods-iVK/Pods-iVK.release.xcconfig"; sourceTree = "<group>"; };
 		D1E3D2087EC2940A5DE8D67A /* libPods-iVK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iVK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -154,6 +156,7 @@
 				3FD5382C1D3023FA00DE9419 /* IVKFeedViewController.m */,
 				3F8B80711D3943F1008EA891 /* Model.xcdatamodeld */,
 				3FB860BC1D4287330069B225 /* PostTableViewCell.h */,
+				3FF4814E1D468F1B0003840D /* PostTableViewCell.xib */,
 				3FB860BD1D4287330069B225 /* PostTableViewCell.m */,
 			);
 			path = iVK;
@@ -236,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FF4814F1D468F1B0003840D /* PostTableViewCell.xib in Resources */,
 				3FD3AA711D14650D007918DA /* LaunchScreen.storyboard in Resources */,
 				3FD3AA6E1D14650D007918DA /* Assets.xcassets in Resources */,
 			);

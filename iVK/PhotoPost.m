@@ -12,6 +12,9 @@
 
 @implementation PhotoPost
 
-// Insert code here to add functionality to your managed object subclass
+-(UIImage *) image{
+    Photo *photo = [self.photos anyObject];
+    return photo.image;
+}
 
 @end

@@ -15,6 +15,7 @@
 
 @dynamic created;
 @dynamic height;
+@dynamic filePath;
 @dynamic id;
 @dynamic text;
 @dynamic url;

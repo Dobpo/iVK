@@ -13,6 +13,11 @@
 
 @implementation Photo
 
-// Insert code here to add functionality to your managed object subclass
+- (UIImage*)image{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = paths[0];
+    NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.jpg", self.filePath]];
+    return [UIImage imageWithContentsOfFile:fullPath];
+}
 
 @end

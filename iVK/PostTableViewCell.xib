@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="547" id="Ilv-bi-w17" customClass="PostTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="545" height="547"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ilv-bi-w17" id="iFl-gM-emX">
+                <rect key="frame" x="0.0" y="0.0" width="545" height="546"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WJk-4h-aM5">
+                        <rect key="frame" x="0.0" y="0.0" width="545" height="307"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="WJk-4h-aM5" secondAttribute="height" multiplier="16:9" id="tqI-N3-65z"/>
+                        </constraints>
+                    </imageView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Tki-2N-UTn">
+                        <rect key="frame" x="0.0" y="307" width="545" height="239"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="WJk-4h-aM5" firstAttribute="width" secondItem="iFl-gM-emX" secondAttribute="width" id="A6Y-mV-BgS"/>
+                    <constraint firstItem="Tki-2N-UTn" firstAttribute="width" secondItem="iFl-gM-emX" secondAttribute="width" id="Kyi-mr-pFW"/>
+                    <constraint firstItem="WJk-4h-aM5" firstAttribute="top" secondItem="iFl-gM-emX" secondAttribute="top" id="Om8-Ge-NUJ"/>
+                    <constraint firstItem="WJk-4h-aM5" firstAttribute="leading" secondItem="Tki-2N-UTn" secondAttribute="leading" id="fjz-cn-uAf"/>
+                    <constraint firstItem="Tki-2N-UTn" firstAttribute="top" secondItem="WJk-4h-aM5" secondAttribute="bottom" id="gTa-0W-Bz7"/>
+                    <constraint firstItem="Tki-2N-UTn" firstAttribute="leading" secondItem="iFl-gM-emX" secondAttribute="leading" id="ikI-lX-yHC"/>
+                    <constraint firstAttribute="bottom" secondItem="Tki-2N-UTn" secondAttribute="bottom" id="j49-Bn-MCq"/>
+                    <constraint firstAttribute="trailing" secondItem="WJk-4h-aM5" secondAttribute="trailing" id="miv-XN-HKu"/>
+                    <constraint firstAttribute="trailing" secondItem="Tki-2N-UTn" secondAttribute="trailing" id="u94-Tf-XuQ"/>
+                    <constraint firstItem="WJk-4h-aM5" firstAttribute="leading" secondItem="iFl-gM-emX" secondAttribute="leading" id="v45-jL-2QK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="postImageView" destination="WJk-4h-aM5" id="uCC-d9-gDV"/>
+                <outlet property="textView" destination="Tki-2N-UTn" id="36R-qP-4DQ"/>
+            </connections>
+            <point key="canvasLocation" x="574.5" y="588.5"/>
+        </tableViewCell>
+    </objects>
+</document>

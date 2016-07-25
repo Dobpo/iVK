@@ -28,7 +28,9 @@
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [self.tableView setDataSource:self];
     [self.tableView setDelegate:self];
-    [self.tableView registerClass:[PostTableViewCell class] forCellReuseIdentifier:@"PostTableViewCell"];
+    //[self.tableView registerClass:[PostTableViewCell class] forCellReuseIdentifier:@"PostTableViewCell"];
+    UINib *nib =  [UINib nibWithNibName:@"PostTableViewCell" bundle:[NSBundle mainBundle]];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"PostTableViewCell"];
     [self.view addSubview:self.tableView];
 }
 
@@ -52,15 +54,35 @@
             NSString *type = attachmentDict[@"type"];
             
             if([type isEqualToString:@"photo"]){
-                Photo *photoObj = [NSEntityDescription insertNewObjectForEntityForName:@"Photo" inManagedObjectContext:[NSManagedObjectContext defaultContext]];
-                
-    
-                
-                photoObj.id = attachmentDict[@"photo"][@"pid"];
-                photoObj.url = attachmentDict[@"photo"][@"src"];
-                photoObj.width = attachmentDict[@"photo"][@"width"];
-                photoObj.height = attachmentDict[@"photo"][@"height"];
-                photoObj.text = attachmentDict[@"photo"][@"text"];
+                NSNumber *photoId = attachmentDict[@"photo"][@"pid"];
+                NSFetchRequest *photoFetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Photo"];
+                photoFetchRequest.predicate = [NSPredicate predicateWithFormat:@"id == %@", photoId];
+                [photoFetchRequest setFetchLimit:1];
+                NSArray *photoFetchResult = [[NSManagedObjectContext defaultContext] executeFetchRequest:photoFetchRequest error:nil];
+                Photo *photoObj =[photoFetchResult firstObject];
+
+                if (photoObj == nil) {
+                    photoObj = [NSEntityDescription insertNewObjectForEntityForName:@"Photo" inManagedObjectContext:[NSManagedObjectContext defaultContext]];
+                    
+                    photoObj.id = attachmentDict[@"photo"][@"pid"];
+                    photoObj.url = attachmentDict[@"photo"][@"src"];
+                    photoObj.width = attachmentDict[@"photo"][@"width"];
+                    photoObj.height = attachmentDict[@"photo"][@"height"];
+                    photoObj.text = attachmentDict[@"photo"][@"text"];
+                    
+                    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+                        
+                        NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:[photoObj url]]];
+                        NSFileManager *fileManager = [NSFileManager defaultManager];
+                        NSString *stringPath = [[NSUUID UUID] UUIDString];
+                        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+                        NSString *documentsDirectory = paths[0];
+                        //NSLog(@"%@", documentsDirectory);
+                        NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.jpg", stringPath]];
+                        [fileManager createFileAtPath:fullPath contents:imageData attributes:nil];
+                        photoObj.filePath = stringPath;
+                    });
+                }
                 
                 NSTimeInterval timeInterval = [attachmentDict[@"photo"][@"created"] doubleValue];
                 photoObj.created = [NSDate dateWithTimeIntervalSince1970:timeInterval];
@@ -86,7 +108,7 @@
                 photoPostObj.type = type;
                 [photoPostObj addPhotosObject:photoObj];
                 [photoObj addWasPostedInObject:photoPostObj];
-                    NSLog(@"s");
+                    
                 }
             }
         }
@@ -106,40 +128,25 @@
 }
 
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
-    PhotoPost *item = self.feedItems[indexPath.row];
-    Photo *photo = [item.photos anyObject];
-    
+    /*PhotoPost *item = self.feedItems[indexPath.row];
+   
     NSString *text = item.text;
-    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:[photo url]]];
-    UIImage *image = [UIImage imageWithData:data];
+    UIImage *image = item.image;
     
     UIFont *font = [UIFont systemFontOfSize:[UIFont systemFontSize]];
     NSDictionary *attributes = @{NSFontAttributeName: font};
+    
     CGRect rect = [text boundingRectWithSize:CGSizeMake(self.tableView.frame.size.width, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil];
     
-    return image.size.height + rect.size.height;
+    return image.size.height + rect.size.height;*/
+    
+    return UITableViewAutomaticDimension;
     
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     PostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostTableViewCell" forIndexPath:indexPath];
-    
-    PhotoPost *item = self.feedItems[indexPath.row];
-    Photo *photo = [item.photos anyObject];
-    
-    cell.textView.text = item.text;
-    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:[photo url]]];
-    cell.imageView.image = [UIImage imageWithData:data];
-    
-    /*if(cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                   reuseIdentifier:@"UITableViewCell"];
-    }
-    PhotoPost *item = self.feedItems[indexPath.row];
-    [[cell textLabel] setText:[NSString stringWithFormat:@("Post type:%@, Text:%@"), [item type], [item text]]];*/
-    
-    
-    
+    cell.post = self.feedItems[indexPath.row];
     return cell;
 }
 
