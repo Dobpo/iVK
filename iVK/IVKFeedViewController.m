@@ -15,6 +15,8 @@
 #import "AppDelegate.h"
 #import "NSManagedObjectContext+EasyAccess.h"
 #import "PostTableViewCell.h"
+#import "UIImageView+AFNetworking.h"
+
 @import CoreText;
 
 
@@ -28,7 +30,8 @@
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [self.tableView setDataSource:self];
     [self.tableView setDelegate:self];
-    //[self.tableView registerClass:[PostTableViewCell class] forCellReuseIdentifier:@"PostTableViewCell"];
+    [self.tableView setEstimatedRowHeight:120];
+    [self.tableView setRowHeight:UITableViewAutomaticDimension];
     UINib *nib =  [UINib nibWithNibName:@"PostTableViewCell" bundle:[NSBundle mainBundle]];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"PostTableViewCell"];
     [self.view addSubview:self.tableView];
@@ -65,23 +68,11 @@
                     photoObj = [NSEntityDescription insertNewObjectForEntityForName:@"Photo" inManagedObjectContext:[NSManagedObjectContext defaultContext]];
                     
                     photoObj.id = attachmentDict[@"photo"][@"pid"];
-                    photoObj.url = attachmentDict[@"photo"][@"src"];
+                    photoObj.url = attachmentDict[@"photo"][@"src_big"];
                     photoObj.width = attachmentDict[@"photo"][@"width"];
                     photoObj.height = attachmentDict[@"photo"][@"height"];
                     photoObj.text = attachmentDict[@"photo"][@"text"];
                     
-                    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-                        
-                        NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:[photoObj url]]];
-                        NSFileManager *fileManager = [NSFileManager defaultManager];
-                        NSString *stringPath = [[NSUUID UUID] UUIDString];
-                        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-                        NSString *documentsDirectory = paths[0];
-                        //NSLog(@"%@", documentsDirectory);
-                        NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.jpg", stringPath]];
-                        [fileManager createFileAtPath:fullPath contents:imageData attributes:nil];
-                        photoObj.filePath = stringPath;
-                    });
                 }
                 
                 NSTimeInterval timeInterval = [attachmentDict[@"photo"][@"created"] doubleValue];
@@ -127,26 +118,21 @@
     return [self.feedItems count];
 }
 
--(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
-    /*PhotoPost *item = self.feedItems[indexPath.row];
-   
-    NSString *text = item.text;
-    UIImage *image = item.image;
-    
-    UIFont *font = [UIFont systemFontOfSize:[UIFont systemFontSize]];
-    NSDictionary *attributes = @{NSFontAttributeName: font};
-    
-    CGRect rect = [text boundingRectWithSize:CGSizeMake(self.tableView.frame.size.width, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil];
-    
-    return image.size.height + rect.size.height;*/
-    
-    return UITableViewAutomaticDimension;
-    
-}
-
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     PostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostTableViewCell" forIndexPath:indexPath];
-    cell.post = self.feedItems[indexPath.row];
+    PhotoPost *post = self.feedItems[indexPath.row];
+    
+    NSURL *url = [NSURL URLWithString:[[post.photos anyObject] url]];
+    [cell.postImageView setImageWithURL:url];
+    
+    
+    NSAttributedString *string =  [[NSAttributedString alloc] initWithData:[post.text dataUsingEncoding:NSUTF8StringEncoding]
+                                     options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
+                                               NSCharacterEncodingDocumentAttribute: @(NSUTF8StringEncoding)}
+                          documentAttributes:nil error:nil];
+   [cell.textView setAttributedText:string];
+    
+    [cell setNeedsLayout];
     return cell;
 }
 

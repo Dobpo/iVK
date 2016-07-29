@@ -9,6 +9,7 @@
 #import "IVKSignUpViewController.h"
 #import "IVKSessionDataManager.h"
 #import "IVKFeedViewController.h"
+#import "IVKPostDetails.h"
 #import "AppDelegate.h"
 #define PADDING 10
 #define TEXT_FIELD_HEIGHT 30
@@ -130,9 +131,20 @@ NSString *secretKey = @"JMKm7SlQ74mWEe9JlZN7";
     [self.testButton setFrame:CGRectMake(self.view.frame.size.width - 60, uiElementsRect.origin.y + TEXT_FIELD_HEIGHT + PADDING, 50, TEXT_FIELD_HEIGHT)];
     [self.view addSubview:self.testButton];
     
+    self.postDetailsButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.postDetailsButton setTitle:@"Show Posts" forState:UIControlStateNormal];
+    [self.postDetailsButton setTitleColor:placeHolderColor forState:UIControlStateNormal];
+    [self.postDetailsButton addTarget:self
+                               action:@selector(postDetailsButtonPressed)
+                      forControlEvents:UIControlEventTouchUpInside];
+    [self.postDetailsButton setFrame:CGRectMake(self.view.frame.size.width - 100, uiElementsRect.origin.y + TEXT_FIELD_HEIGHT + PADDING + 40, 100, TEXT_FIELD_HEIGHT)];
+    [self.view addSubview:self.postDetailsButton];
     
-    
-    
+}
+
+-(void)postDetailsButtonPressed{
+    IVKPostDetails *postDetailsViewController = [[IVKPostDetails alloc]init];
+    [self.navigationController pushViewController:postDetailsViewController animated:YES];
 }
 
 -(void)testButtonPressed{

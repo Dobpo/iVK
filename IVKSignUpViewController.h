@@ -18,6 +18,8 @@
 @property (nonatomic, strong) UITextField *passwordTextField;
 @property (nonatomic, strong) UIButton *signInButton;
 
+@property (nonatomic, strong) UIButton *postDetailsButton;
+
 
 @property (nonatomic, strong) UIButton *testButton;
 

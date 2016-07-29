@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15F34" minimumToolsVersion="Xcode 7.0">
+    <entity name="Comment" syncable="YES">
+        <attribute name="created" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="createdComments" inverseEntity="User" syncable="YES"/>
+    </entity>
     <entity name="Photo" representedClassName="Photo" syncable="YES">
         <attribute name="created" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="filePath" optional="YES" attributeType="String" syncable="YES"/>
@@ -34,6 +40,7 @@
         <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="createdComments" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Comment" inverseName="owner" inverseEntity="Comment" syncable="YES"/>
         <relationship name="createdPhotoAlbums" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PhotoAlbum" inverseName="owner" inverseEntity="PhotoAlbum" syncable="YES"/>
         <relationship name="createdPhotos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Photo" inverseName="owner" inverseEntity="Photo" syncable="YES"/>
         <relationship name="createdPosts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PhotoPost" inverseName="owner" inverseEntity="PhotoPost" syncable="YES"/>
@@ -42,6 +49,7 @@
         <element name="Photo" positionX="-63" positionY="-18" width="128" height="210"/>
         <element name="PhotoAlbum" positionX="-54" positionY="36" width="128" height="150"/>
         <element name="PhotoPost" positionX="-54" positionY="72" width="128" height="133"/>
-        <element name="User" positionX="-36" positionY="54" width="128" height="135"/>
+        <element name="User" positionX="-36" positionY="54" width="128" height="150"/>
+        <element name="Comment" positionX="-45" positionY="90" width="128" height="105"/>
     </elements>
 </model>

@@ -19,6 +19,7 @@
 		3F4DF0731D3D562600F8677B /* PhotoPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4DF0711D3D562600F8677B /* PhotoPost.m */; };
 		3F5EABF91D26E17000E13F60 /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EABF81D26E17000E13F60 /* UIColor+CustomColors.m */; };
 		3F6F87CE1D1D92E50041D86E /* IVKSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F87CD1D1D92E50041D86E /* IVKSignUpViewController.m */; };
+		3F791DE21D4BBBC60061E9DA /* IVKPostDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F791DE11D4BBBC60061E9DA /* IVKPostDetails.m */; };
 		3F8B80731D3943F1008EA891 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B80711D3943F1008EA891 /* Model.xcdatamodeld */; };
 		3F8B80891D3952D7008EA891 /* NSManagedObjectContext+EasyAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B80881D3952D7008EA891 /* NSManagedObjectContext+EasyAccess.m */; };
 		3FB860BE1D4287330069B225 /* PostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB860BD1D4287330069B225 /* PostTableViewCell.m */; };
@@ -54,6 +55,8 @@
 		3F5EABF81D26E17000E13F60 /* UIColor+CustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
 		3F6F87CC1D1D92E50041D86E /* IVKSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IVKSignUpViewController.h; path = ../IVKSignUpViewController.h; sourceTree = "<group>"; };
 		3F6F87CD1D1D92E50041D86E /* IVKSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IVKSignUpViewController.m; path = ../IVKSignUpViewController.m; sourceTree = "<group>"; };
+		3F791DE01D4BBBC60061E9DA /* IVKPostDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVKPostDetails.h; sourceTree = "<group>"; };
+		3F791DE11D4BBBC60061E9DA /* IVKPostDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVKPostDetails.m; sourceTree = "<group>"; };
 		3F8B80721D3943F1008EA891 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		3F8B80871D3952D7008EA891 /* NSManagedObjectContext+EasyAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+EasyAccess.h"; sourceTree = "<group>"; };
 		3F8B80881D3952D7008EA891 /* NSManagedObjectContext+EasyAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+EasyAccess.m"; sourceTree = "<group>"; };
@@ -158,6 +161,8 @@
 				3FB860BC1D4287330069B225 /* PostTableViewCell.h */,
 				3FF4814E1D468F1B0003840D /* PostTableViewCell.xib */,
 				3FB860BD1D4287330069B225 /* PostTableViewCell.m */,
+				3F791DE01D4BBBC60061E9DA /* IVKPostDetails.h */,
+				3F791DE11D4BBBC60061E9DA /* IVKPostDetails.m */,
 			);
 			path = iVK;
 			sourceTree = "<group>";
@@ -315,6 +320,7 @@
 				3FD5382D1D3023FA00DE9419 /* IVKFeedViewController.m in Sources */,
 				3F4DF0671D3D54DC00F8677B /* PhotoAlbum.m in Sources */,
 				3F4DF0611D3D54DC00F8677B /* Photo.m in Sources */,
+				3F791DE21D4BBBC60061E9DA /* IVKPostDetails.m in Sources */,
 				3F447A721D2AC32800378009 /* IVKSessionDataManager.m in Sources */,
 				3FD3AA631D14650D007918DA /* main.m in Sources */,
 			);

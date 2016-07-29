@@ -13,7 +13,7 @@
 @interface PostTableViewCell : UITableViewCell
 
 @property (nonatomic, retain) IBOutlet UIImageView *postImageView;
-@property (nonatomic, retain) IBOutlet UITextView *textView;
+@property (nonatomic, retain) IBOutlet UILabel *textView;
 @property (nonatomic, retain) PhotoPost *post;
 
 - (void)layoutSubviews;
