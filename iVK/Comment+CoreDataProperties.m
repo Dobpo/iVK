@@ -1,5 +1,5 @@
 //
-//  PhotoPost+CoreDataProperties.m
+//  Comment+CoreDataProperties.m
 //  iVK
 //
 //  Created by Student on 8/1/16.
@@ -9,19 +9,13 @@
 //  to delete and recreate this implementation file for your updated model.
 //
 
-#import "PhotoPost+CoreDataProperties.h"
+#import "Comment+CoreDataProperties.h"
 
-@implementation PhotoPost (CoreDataProperties)
+@implementation Comment (CoreDataProperties)
 
 @dynamic created;
 @dynamic id;
 @dynamic text;
-@dynamic type;
-@dynamic comentsCount;
-@dynamic likesCount;
-@dynamic repostsCount;
-@dynamic sourceId;
 @dynamic owner;
-@dynamic photos;
 
 @end

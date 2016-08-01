@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PhotoPost.h"
 @import UIKit;
 
 @interface IVKPostDetails : UIViewController
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) PhotoPost *post;
 
 @end

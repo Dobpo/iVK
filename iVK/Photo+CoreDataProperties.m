@@ -2,7 +2,7 @@
 //  Photo+CoreDataProperties.m
 //  iVK
 //
-//  Created by Student on 7/18/16.
+//  Created by Student on 8/1/16.
 //  Copyright © 2016 Student. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -14,8 +14,8 @@
 @implementation Photo (CoreDataProperties)
 
 @dynamic created;
-@dynamic height;
 @dynamic filePath;
+@dynamic height;
 @dynamic id;
 @dynamic text;
 @dynamic url;

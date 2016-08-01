@@ -11,7 +11,7 @@
 
 @import UIKit;
 
-@interface IVKFeedViewController : UIViewController <UITableViewDataSource>
+@interface IVKFeedViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) NSMutableArray *feedItems;
 @property (nonatomic, strong) UITableView *tableView;

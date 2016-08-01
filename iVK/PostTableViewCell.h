@@ -15,6 +15,7 @@
 @property (nonatomic, retain) IBOutlet UIImageView *postImageView;
 @property (nonatomic, retain) IBOutlet UILabel *textView;
 @property (nonatomic, retain) PhotoPost *post;
+@property (weak, nonatomic) IBOutlet UILabel *commentsCountLabel;
 
 - (void)layoutSubviews;
 

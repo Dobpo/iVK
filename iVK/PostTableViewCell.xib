@@ -21,13 +21,22 @@
                             <constraint firstAttribute="width" secondItem="WJk-4h-aM5" secondAttribute="height" multiplier="16:9" id="tqI-N3-65z"/>
                         </constraints>
                     </imageView>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Tki-2N-UTn">
-                        <rect key="frame" x="0.0" y="307" width="545" height="239"/>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Tki-2N-UTn">
+                        <rect key="frame" x="0.0" y="307" width="545" height="210"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFp-jO-yRs">
+                        <rect key="frame" x="503" y="525" width="42" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="F3e-GS-c6Q"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="WJk-4h-aM5" firstAttribute="width" secondItem="iFl-gM-emX" secondAttribute="width" id="A6Y-mV-BgS"/>
@@ -37,12 +46,21 @@
                     <constraint firstItem="Tki-2N-UTn" firstAttribute="top" secondItem="WJk-4h-aM5" secondAttribute="bottom" id="gTa-0W-Bz7"/>
                     <constraint firstItem="Tki-2N-UTn" firstAttribute="leading" secondItem="iFl-gM-emX" secondAttribute="leading" id="ikI-lX-yHC"/>
                     <constraint firstAttribute="bottom" secondItem="Tki-2N-UTn" secondAttribute="bottom" id="j49-Bn-MCq"/>
+                    <constraint firstItem="iFp-jO-yRs" firstAttribute="top" secondItem="Tki-2N-UTn" secondAttribute="bottom" id="j56-Jr-uMg"/>
+                    <constraint firstAttribute="bottom" secondItem="iFp-jO-yRs" secondAttribute="bottom" id="loM-UA-cDW"/>
                     <constraint firstAttribute="trailing" secondItem="WJk-4h-aM5" secondAttribute="trailing" id="miv-XN-HKu"/>
+                    <constraint firstAttribute="trailing" secondItem="iFp-jO-yRs" secondAttribute="trailing" id="p95-rX-5g1"/>
                     <constraint firstAttribute="trailing" secondItem="Tki-2N-UTn" secondAttribute="trailing" id="u94-Tf-XuQ"/>
                     <constraint firstItem="WJk-4h-aM5" firstAttribute="leading" secondItem="iFl-gM-emX" secondAttribute="leading" id="v45-jL-2QK"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="j49-Bn-MCq"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
+                <outlet property="commentsCountLabel" destination="iFp-jO-yRs" id="hrg-3x-cWN"/>
                 <outlet property="postImageView" destination="WJk-4h-aM5" id="uCC-d9-gDV"/>
                 <outlet property="textView" destination="Tki-2N-UTn" id="36R-qP-4DQ"/>
             </connections>

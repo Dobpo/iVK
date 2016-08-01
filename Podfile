@@ -10,3 +10,6 @@ pod 'AFNetworking', '~> 3.0'
   # Pods for iVK
 
 end
+
+0x00196044
+0x00196044

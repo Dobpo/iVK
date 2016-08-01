@@ -2,7 +2,7 @@
 //  Photo.m
 //  iVK
 //
-//  Created by Student on 7/18/16.
+//  Created by Student on 8/1/16.
 //  Copyright © 2016 Student. All rights reserved.
 //
 
@@ -13,11 +13,6 @@
 
 @implementation Photo
 
-- (UIImage*)image{
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = paths[0];
-    NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.jpg", self.filePath]];
-    return [UIImage imageWithContentsOfFile:fullPath];
-}
+// Insert code here to add functionality to your managed object subclass
 
 @end

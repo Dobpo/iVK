@@ -16,11 +16,12 @@
 #import "NSManagedObjectContext+EasyAccess.h"
 #import "PostTableViewCell.h"
 #import "UIImageView+AFNetworking.h"
+#import "IVKPostDetails.h"
 
 @import CoreText;
 
 
-@implementation IVKFeedViewController 
+@implementation IVKFeedViewController
 -(void) viewDidLoad{
     [super viewDidLoad];
     self.feedItems = [[NSMutableArray alloc] init];
@@ -63,7 +64,7 @@
                 [photoFetchRequest setFetchLimit:1];
                 NSArray *photoFetchResult = [[NSManagedObjectContext defaultContext] executeFetchRequest:photoFetchRequest error:nil];
                 Photo *photoObj =[photoFetchResult firstObject];
-
+                
                 if (photoObj == nil) {
                     photoObj = [NSEntityDescription insertNewObjectForEntityForName:@"Photo" inManagedObjectContext:[NSManagedObjectContext defaultContext]];
                     
@@ -91,14 +92,18 @@
                 }
                 
                 if([self photoPostNotExist:item[@"post_id"]]){
-                PhotoPost *photoPostObj = [NSEntityDescription insertNewObjectForEntityForName:@"PhotoPost" inManagedObjectContext:[NSManagedObjectContext defaultContext]];
-                photoPostObj.id = item[@"post_id"];
-                photoPostObj.text = item[@"text"];
-                timeInterval = [item[@"date"] doubleValue];
-                photoPostObj.created = [NSDate dateWithTimeIntervalSince1970:timeInterval];
-                photoPostObj.type = type;
-                [photoPostObj addPhotosObject:photoObj];
-                [photoObj addWasPostedInObject:photoPostObj];
+                    PhotoPost *photoPostObj = [NSEntityDescription insertNewObjectForEntityForName:@"PhotoPost" inManagedObjectContext:[NSManagedObjectContext defaultContext]];
+                    photoPostObj.id = item[@"post_id"];
+                    photoPostObj.text = item[@"text"];
+                    photoPostObj.sourceId = [item[@"source_id"] stringValue];
+                    timeInterval = [item[@"date"] doubleValue];
+                    photoPostObj.created = [NSDate dateWithTimeIntervalSince1970:timeInterval];
+                    photoPostObj.type = type;
+                    photoPostObj.likesCount = item[@"likes"][@"count"];
+                    photoPostObj.comentsCount = item[@"comments"][@"count"];
+                    photoPostObj.repostsCount = item[@"reposts"][@"count"];
+                    [photoPostObj addPhotosObject:photoObj];
+                    [photoObj addWasPostedInObject:photoPostObj];
                     
                 }
             }
@@ -127,13 +132,23 @@
     
     
     NSAttributedString *string =  [[NSAttributedString alloc] initWithData:[post.text dataUsingEncoding:NSUTF8StringEncoding]
-                                     options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
-                                               NSCharacterEncodingDocumentAttribute: @(NSUTF8StringEncoding)}
-                          documentAttributes:nil error:nil];
-   [cell.textView setAttributedText:string];
+                                                                   options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
+                                                                             NSCharacterEncodingDocumentAttribute: @(NSUTF8StringEncoding)}
+                                                        documentAttributes:nil error:nil];
+    [cell.textView setAttributedText:string];
+    [cell.commentsCountLabel setText:post.comentsCount.stringValue];
     
     [cell setNeedsLayout];
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    PhotoPost *post = self.feedItems[indexPath.row];
+    
+    IVKPostDetails *postDetailsViewController = [[IVKPostDetails alloc]init];
+    postDetailsViewController.post = post;
+    
+    [self.navigationController pushViewController:postDetailsViewController animated:YES];
 }
 
 -(BOOL)photoPostNotExist:(NSNumber *)postId{

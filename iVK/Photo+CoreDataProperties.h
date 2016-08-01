@@ -2,7 +2,7 @@
 //  Photo+CoreDataProperties.h
 //  iVK
 //
-//  Created by Student on 7/18/16.
+//  Created by Student on 8/1/16.
 //  Copyright © 2016 Student. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -16,8 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Photo (CoreDataProperties)
 
 @property (nullable, nonatomic, retain) NSDate *created;
-@property (nullable, nonatomic, retain) NSNumber *height;
 @property (nullable, nonatomic, retain) NSString *filePath;
+@property (nullable, nonatomic, retain) NSNumber *height;
 @property (nullable, nonatomic, retain) NSNumber *id;
 @property (nullable, nonatomic, retain) NSString *text;
 @property (nullable, nonatomic, retain) NSString *url;
@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) PhotoAlbum *album;
 @property (nullable, nonatomic, retain) PhotoAlbum *albumCover;
 @property (nullable, nonatomic, retain) User *owner;
-@property (nullable, nonatomic, retain) NSSet <PhotoPost *> *wasPostedIn;
+@property (nullable, nonatomic, retain) NSSet<PhotoPost *> *wasPostedIn;
 
 @end
 

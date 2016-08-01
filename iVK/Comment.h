@@ -1,5 +1,5 @@
 //
-//  Photo.h
+//  Comment.h
 //  iVK
 //
 //  Created by Student on 8/1/16.
@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class PhotoAlbum, PhotoPost, User;
+@class User;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Photo : NSManagedObject
+@interface Comment : NSManagedObject
 
 // Insert code here to declare functionality of your managed object subclass
 
@@ -21,4 +21,4 @@ NS_ASSUME_NONNULL_BEGIN
 
 NS_ASSUME_NONNULL_END
 
-#import "Photo+CoreDataProperties.h"
+#import "Comment+CoreDataProperties.h"
