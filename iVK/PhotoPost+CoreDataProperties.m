@@ -23,5 +23,6 @@
 @dynamic sourceId;
 @dynamic owner;
 @dynamic photos;
+@dynamic comments;
 
 @end

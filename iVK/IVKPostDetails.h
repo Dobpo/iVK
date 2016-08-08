@@ -10,7 +10,7 @@
 #import "PhotoPost.h"
 @import UIKit;
 
-@interface IVKPostDetails : UIViewController
+@interface IVKPostDetails : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) PhotoPost *post;

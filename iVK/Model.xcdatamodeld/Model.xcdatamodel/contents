@@ -5,6 +5,7 @@
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="createdComments" inverseEntity="User" syncable="YES"/>
+        <relationship name="post" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhotoPost" inverseName="comments" inverseEntity="PhotoPost" syncable="YES"/>
     </entity>
     <entity name="Photo" representedClassName="Photo" syncable="YES">
         <attribute name="created" optional="YES" attributeType="Date" syncable="YES"/>
@@ -37,6 +38,7 @@
         <attribute name="sourceId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="comments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Comment" inverseName="post" inverseEntity="Comment" syncable="YES"/>
         <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="createdPosts" inverseEntity="User" syncable="YES"/>
         <relationship name="photos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Photo" inverseName="wasPostedIn" inverseEntity="Photo" syncable="YES"/>
     </entity>
@@ -50,10 +52,10 @@
         <relationship name="createdPosts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PhotoPost" inverseName="owner" inverseEntity="PhotoPost" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Comment" positionX="-45" positionY="90" width="128" height="105"/>
+        <element name="Comment" positionX="-45" positionY="90" width="128" height="120"/>
         <element name="Photo" positionX="-63" positionY="-18" width="128" height="210"/>
         <element name="PhotoAlbum" positionX="-54" positionY="36" width="128" height="150"/>
-        <element name="PhotoPost" positionX="-54" positionY="72" width="128" height="195"/>
+        <element name="PhotoPost" positionX="-54" positionY="72" width="128" height="210"/>
         <element name="User" positionX="-36" positionY="54" width="128" height="150"/>
     </elements>
 </model>

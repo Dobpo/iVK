@@ -25,6 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSString *sourceId;
 @property (nullable, nonatomic, retain) User *owner;
 @property (nullable, nonatomic, retain) NSSet<Photo *> *photos;
+@property (nullable, nonatomic, retain) NSSet<Comment *> *comments;
 
 @end
 
@@ -34,6 +35,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)removePhotosObject:(Photo *)value;
 - (void)addPhotos:(NSSet<Photo *> *)values;
 - (void)removePhotos:(NSSet<Photo *> *)values;
+- (void)addComments:(NSSet<Comment *> *)values;
+- (void)removeComments:(NSSet<Comment *> *)values;
 
 @end
 

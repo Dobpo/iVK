@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSNumber *id;
 @property (nullable, nonatomic, retain) NSString *text;
 @property (nullable, nonatomic, retain) User *owner;
+@property (nullable, nonatomic, retain) PhotoPost *post;
 
 @end
 

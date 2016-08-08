@@ -10,10 +10,7 @@
 #import "PhotoPost.h"
 #import "Photo.h"
 
-@implementation PostTableViewCell {
-
-}
-
+@implementation PostTableViewCell
 
 - (void)layoutSubviews{
     [super layoutSubviews];

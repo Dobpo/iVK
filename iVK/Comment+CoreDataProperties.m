@@ -17,5 +17,6 @@
 @dynamic id;
 @dynamic text;
 @dynamic owner;
+@dynamic post;
 
 @end
