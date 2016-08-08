@@ -49,7 +49,6 @@
         <relationship name="createdComments" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Comment" inverseName="owner" inverseEntity="Comment" syncable="YES"/>
         <relationship name="createdPhotoAlbums" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PhotoAlbum" inverseName="owner" inverseEntity="PhotoAlbum" syncable="YES"/>
         <relationship name="createdPhotos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Photo" inverseName="owner" inverseEntity="Photo" syncable="YES"/>
-        <relationship name="createdPosts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PhotoPost" inverseName="owner" inverseEntity="PhotoPost" syncable="YES"/>
     </entity>
     <elements>
         <element name="Comment" positionX="-45" positionY="90" width="128" height="120"/>

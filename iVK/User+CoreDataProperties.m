@@ -19,6 +19,5 @@
 @dynamic createdComments;
 @dynamic createdPhotoAlbums;
 @dynamic createdPhotos;
-@dynamic createdPosts;
 
 @end

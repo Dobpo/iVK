@@ -354,6 +354,8 @@
 				3F4626BE1D4FA89300F7AA53 /* Comment.m in Sources */,
 				3F8B80891D3952D7008EA891 /* NSManagedObjectContext+EasyAccess.m in Sources */,
 				3F5EABF91D26E17000E13F60 /* UIColor+CustomColors.m in Sources */,
+				DD9E9FDC1D3D763000BC1ABF /* User.m in Sources */,
+				DD9E9FD81D3D763000BC1ABF /* Photo.m in Sources */,
 				3F6F87CE1D1D92E50041D86E /* IVKSignUpViewController.m in Sources */,
 				3FB860BE1D4287330069B225 /* PostTableViewCell.m in Sources */,
 				3F8B80731D3943F1008EA891 /* Model.xcdatamodeld in Sources */,
@@ -368,6 +370,7 @@
 				3FD5382D1D3023FA00DE9419 /* IVKFeedViewController.m in Sources */,
 				3F791DE21D4BBBC60061E9DA /* IVKPostDetails.m in Sources */,
 				3F447A721D2AC32800378009 /* IVKSessionDataManager.m in Sources */,
+				DD9E9FDB1D3D763000BC1ABF /* User+CoreDataProperties.m in Sources */,
 				3FD3AA631D14650D007918DA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

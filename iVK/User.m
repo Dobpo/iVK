@@ -9,7 +9,6 @@
 #import "User.h"
 #import "Photo.h"
 #import "PhotoAlbum.h"
-#import "PhotoPost.h"
 
 @implementation User
 

@@ -8,7 +8,6 @@
 
 #import "PhotoPost.h"
 #import "Photo.h"
-#import "User.h"
 
 @implementation PhotoPost
 
